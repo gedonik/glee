@@ -15,11 +15,7 @@
 
       <div class="header__inner">
         <a class="logo" href="#">
-          <svg class="logo__svg" xmlns="http://www.w3.org/2000/svg" width="50.125" height="38.875">
-            <path data-name="Path 324"
-              d="M.157 28.674a1.13 1.13 0 00.622.387l48.041 9.8a1.137 1.137 0 00.908-.212.874.874 0 00.31-.8L43.787.77a.962.962 0 00-.449-.645 1.337 1.337 0 00-.965-.051L7.179 14.118a.9.9 0 00-.507.452C6.501 14.895.178 27.646.089 27.827a.806.806 0 00.068.847zm45.586 6.436l-20.05-11.145 10.339-2.159zm-37.7-18.883l12.526 6.983-17.833 3.715zm1.662-1.172L41.24 2.468l-5.558 17.587-12.371 2.584zM47.363 34.05l-9.779-13.4 4.9-15.52zm-3.886 1.9L5.426 28.187l17.523-3.65z"
-              fill="#a3bbc8" fill-rule="evenodd" /></svg>
-          Glee.
+          <img src="images/icons/logo.png" alt="logo">
         </a>
 
         <nav class="menu">
@@ -69,7 +65,301 @@
   </header>
 
   <main class="main">
+    <section class="top-slider">
+      <div class="wrapper">
 
+        <div class="top-slider__inner">
+          <div class="top-slider__item">
+            <div class="top-slider__content">
+              <p class="top-slider__title">Smart and trendy</p>
+              <p class="top-slider__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              </p>
+              <button class="top-slider__btn" type="submit">Shop Now</button>
+            </div>
+            <img class="top-slider__img" src="images/slider/1.jpg" alt="">
+          </div>
+          <div class="top-slider__item">
+            <div class="top-slider__content">
+              <p class="top-slider__title">Smart and trendy</p>
+              <p class="top-slider__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              </p>
+              <button class="top-slider__btn" type="submit">Shop Now</button>
+            </div>
+            <img class="top-slider__img" src="images/slider/1.jpg" alt="">
+          </div>
+          <div class="top-slider__item">
+            <div class="top-slider__content">
+              <p class="top-slider__title">Smart and trendy</p>
+              <p class="top-slider__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              </p>
+              <button class="top-slider__btn" type="submit">Shop Now</button>
+            </div>
+            <img class="top-slider__img" src="images/slider/1.jpg" alt="">
+          </div>
+        </div>
+
+        <ul class="top-advantages">
+          <li class="top-advantages__item top-advantages__item--clock">
+            <p class="top-advantages__title">Support 24/7.</p>
+            <p class="top-advantages__text">Contact us 24 hours a day, <br> 7 days a week.</p>
+          </li>
+          <li class="top-advantages__item top-advantages__item--delivery">
+            <p class="top-advantages__title">Delivery.</p>
+            <p class="top-advantages__text">Free shipping on all US order.</p>
+          </li>
+          <li class="top-advantages__item top-advantages__item--payment">
+            <p class="top-advantages__title">100% Payment secure.</p>
+            <p class="top-advantages__text">We ensure secure payment with PEV.</p>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <section class="popular">
+      <div class="wrapper popular__wrapper">
+        <div class="container">
+          <h1 class="title popular__title">Products of the week</h1>
+          <ul class="popular__filter-btn">
+            <li class="popular__btn">
+              <a href="#" data-filter="all">All</a>
+            </li>
+            <li class="popular__btn">
+              <a href="#" data-filter=".category-a">Furnitures</a>
+            </li>
+            <li class="popular__btn">
+              <a href="#" data-filter=".category-b">Chairs</a>
+            </li>
+            <li class="popular__btn">
+              <a href="#" data-filter=".category-c">Lighting</a>
+            </li>
+            <li class="popular__btn">
+              <a href="#" data-filter=".category-d">Decor</a>
+            </li>
+          </ul>
+          <!-- не совсем ровно вышло. картинки разного размера и поставить их ровно для меня тяжело, способ который я нашел - в фотошопе при скачивании картинок задавал всем одинаковый размер холста, и белое на белом конечно мега ход =) -->
+          <ul class="popular__content">
+            <li class="popular__item mix category-a category-b">
+              <a class="popular__link" href="#">
+                <img class="popular__img" src="images/popular/1.jpg" alt="popular images">
+                <div class="popular__items">
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M31.95 29.3l-4.588-4.59a8.827 8.827 0 01-2.651 2.65l4.588 4.59a1.874 1.874 0 002.651-2.65zM27.5 20a7.5 7.5 0 10-7.5 7.5 7.5 7.5 0 007.5-7.5zM20 25.62A5.625 5.625 0 1125.625 20 5.628 5.628 0 0120 25.62zM15.625 20h1.25A3.135 3.135 0 0120 16.87v-1.25A4.386 4.386 0 0015.625 20z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M12.314 14.13h2.333l3.323 12.04a.812.812 0 00.787.59h10.214a.821.821 0 00.746-.48l3.717-8.56a.836.836 0 00-.068-.78.813.813 0 00-.678-.37H21.4a.82.82 0 000 1.64h10.04l-3.011 6.92h-9.062L16.044 13.1a.808.808 0 00-.787-.6h-2.943a.815.815 0 000 1.63zm5.67 18.37a1.85 1.85 0 10-1.845-1.85 1.85 1.85 0 001.845 1.85zm11.53 0h.135a1.907 1.907 0 10-.135 0z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M33.49 19.32a6.208 6.208 0 00-1.849-4.1A5.871 5.871 0 0027.5 13.5c-2.311 0-3.948 1.78-4.827 2.74a2.156 2.156 0 01-.156.17l-.083-.09c-.8-.92-2.476-2.82-4.938-2.82a5.873 5.873 0 00-4.139 1.72 6.208 6.208 0 00-1.849 4.1 6.845 6.845 0 001.271 4.34 29.307 29.307 0 004.763 4.75c1.705 1.41 3.95 3.09 4.965 3.09 1.032 0 3.269-1.68 4.965-3.09a29.234 29.234 0 004.746-4.75 6.935 6.935 0 001.272-4.34zm-2.376 3.61a27 27 0 01-4.431 4.42c-2.406 2-3.831 2.79-4.172 2.82-.342-.03-1.77-.83-4.188-2.84a26.78 26.78 0 01-4.437-4.4 5.6 5.6 0 01-1.054-3.54 4.807 4.807 0 014.666-4.57c1.863 0 3.216 1.54 3.943 2.37a1.52 1.52 0 001.059.76 1.731 1.731 0 001.151-.81c.794-.87 2.122-2.32 3.851-2.32a4.807 4.807 0 014.666 4.57 5.528 5.528 0 01-1.054 3.54z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                </div>
+                <p class="popular__name">Wooden radio</p>
+                <p class="popular__price">$29.00</p>
+              </a>
+            </li>
+            <li class="popular__item mix category-a category-b category-d">
+              <a class="popular__link" href="#">
+                <img class="popular__img" src="images/popular/2.jpg" alt="popular images">
+                <div class="popular__items">
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M31.95 29.3l-4.588-4.59a8.827 8.827 0 01-2.651 2.65l4.588 4.59a1.874 1.874 0 002.651-2.65zM27.5 20a7.5 7.5 0 10-7.5 7.5 7.5 7.5 0 007.5-7.5zM20 25.62A5.625 5.625 0 1125.625 20 5.628 5.628 0 0120 25.62zM15.625 20h1.25A3.135 3.135 0 0120 16.87v-1.25A4.386 4.386 0 0015.625 20z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M12.314 14.13h2.333l3.323 12.04a.812.812 0 00.787.59h10.214a.821.821 0 00.746-.48l3.717-8.56a.836.836 0 00-.068-.78.813.813 0 00-.678-.37H21.4a.82.82 0 000 1.64h10.04l-3.011 6.92h-9.062L16.044 13.1a.808.808 0 00-.787-.6h-2.943a.815.815 0 000 1.63zm5.67 18.37a1.85 1.85 0 10-1.845-1.85 1.85 1.85 0 001.845 1.85zm11.53 0h.135a1.907 1.907 0 10-.135 0z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M33.49 19.32a6.208 6.208 0 00-1.849-4.1A5.871 5.871 0 0027.5 13.5c-2.311 0-3.948 1.78-4.827 2.74a2.156 2.156 0 01-.156.17l-.083-.09c-.8-.92-2.476-2.82-4.938-2.82a5.873 5.873 0 00-4.139 1.72 6.208 6.208 0 00-1.849 4.1 6.845 6.845 0 001.271 4.34 29.307 29.307 0 004.763 4.75c1.705 1.41 3.95 3.09 4.965 3.09 1.032 0 3.269-1.68 4.965-3.09a29.234 29.234 0 004.746-4.75 6.935 6.935 0 001.272-4.34zm-2.376 3.61a27 27 0 01-4.431 4.42c-2.406 2-3.831 2.79-4.172 2.82-.342-.03-1.77-.83-4.188-2.84a26.78 26.78 0 01-4.437-4.4 5.6 5.6 0 01-1.054-3.54 4.807 4.807 0 014.666-4.57c1.863 0 3.216 1.54 3.943 2.37a1.52 1.52 0 001.059.76 1.731 1.731 0 001.151-.81c.794-.87 2.122-2.32 3.851-2.32a4.807 4.807 0 014.666 4.57 5.528 5.528 0 01-1.054 3.54z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                </div>
+                <p class="popular__name">Wooden chair</p>
+                <p class="popular__price">$29.00</p>
+              </a>
+            </li>
+            <li class="popular__item mix category-b category-d">
+              <a class="popular__link" href="#">
+                <img class="popular__img" src="images/popular/3.jpg" alt="popular images">
+                <div class="popular__items">
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M31.95 29.3l-4.588-4.59a8.827 8.827 0 01-2.651 2.65l4.588 4.59a1.874 1.874 0 002.651-2.65zM27.5 20a7.5 7.5 0 10-7.5 7.5 7.5 7.5 0 007.5-7.5zM20 25.62A5.625 5.625 0 1125.625 20 5.628 5.628 0 0120 25.62zM15.625 20h1.25A3.135 3.135 0 0120 16.87v-1.25A4.386 4.386 0 0015.625 20z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M12.314 14.13h2.333l3.323 12.04a.812.812 0 00.787.59h10.214a.821.821 0 00.746-.48l3.717-8.56a.836.836 0 00-.068-.78.813.813 0 00-.678-.37H21.4a.82.82 0 000 1.64h10.04l-3.011 6.92h-9.062L16.044 13.1a.808.808 0 00-.787-.6h-2.943a.815.815 0 000 1.63zm5.67 18.37a1.85 1.85 0 10-1.845-1.85 1.85 1.85 0 001.845 1.85zm11.53 0h.135a1.907 1.907 0 10-.135 0z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M33.49 19.32a6.208 6.208 0 00-1.849-4.1A5.871 5.871 0 0027.5 13.5c-2.311 0-3.948 1.78-4.827 2.74a2.156 2.156 0 01-.156.17l-.083-.09c-.8-.92-2.476-2.82-4.938-2.82a5.873 5.873 0 00-4.139 1.72 6.208 6.208 0 00-1.849 4.1 6.845 6.845 0 001.271 4.34 29.307 29.307 0 004.763 4.75c1.705 1.41 3.95 3.09 4.965 3.09 1.032 0 3.269-1.68 4.965-3.09a29.234 29.234 0 004.746-4.75 6.935 6.935 0 001.272-4.34zm-2.376 3.61a27 27 0 01-4.431 4.42c-2.406 2-3.831 2.79-4.172 2.82-.342-.03-1.77-.83-4.188-2.84a26.78 26.78 0 01-4.437-4.4 5.6 5.6 0 01-1.054-3.54 4.807 4.807 0 014.666-4.57c1.863 0 3.216 1.54 3.943 2.37a1.52 1.52 0 001.059.76 1.731 1.731 0 001.151-.81c.794-.87 2.122-2.32 3.851-2.32a4.807 4.807 0 014.666 4.57 5.528 5.528 0 01-1.054 3.54z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                </div>
+                <p class="popular__name">White chair</p>
+                <p class="popular__price">$29.00</p>
+              </a>
+            </li>
+            <li class="popular__item mix category-b">
+              <a class="popular__link" href="#">
+                <img class="popular__img" src="images/popular/4.jpg" alt="popular images">
+                <div class="popular__items">
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M31.95 29.3l-4.588-4.59a8.827 8.827 0 01-2.651 2.65l4.588 4.59a1.874 1.874 0 002.651-2.65zM27.5 20a7.5 7.5 0 10-7.5 7.5 7.5 7.5 0 007.5-7.5zM20 25.62A5.625 5.625 0 1125.625 20 5.628 5.628 0 0120 25.62zM15.625 20h1.25A3.135 3.135 0 0120 16.87v-1.25A4.386 4.386 0 0015.625 20z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M12.314 14.13h2.333l3.323 12.04a.812.812 0 00.787.59h10.214a.821.821 0 00.746-.48l3.717-8.56a.836.836 0 00-.068-.78.813.813 0 00-.678-.37H21.4a.82.82 0 000 1.64h10.04l-3.011 6.92h-9.062L16.044 13.1a.808.808 0 00-.787-.6h-2.943a.815.815 0 000 1.63zm5.67 18.37a1.85 1.85 0 10-1.845-1.85 1.85 1.85 0 001.845 1.85zm11.53 0h.135a1.907 1.907 0 10-.135 0z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M33.49 19.32a6.208 6.208 0 00-1.849-4.1A5.871 5.871 0 0027.5 13.5c-2.311 0-3.948 1.78-4.827 2.74a2.156 2.156 0 01-.156.17l-.083-.09c-.8-.92-2.476-2.82-4.938-2.82a5.873 5.873 0 00-4.139 1.72 6.208 6.208 0 00-1.849 4.1 6.845 6.845 0 001.271 4.34 29.307 29.307 0 004.763 4.75c1.705 1.41 3.95 3.09 4.965 3.09 1.032 0 3.269-1.68 4.965-3.09a29.234 29.234 0 004.746-4.75 6.935 6.935 0 001.272-4.34zm-2.376 3.61a27 27 0 01-4.431 4.42c-2.406 2-3.831 2.79-4.172 2.82-.342-.03-1.77-.83-4.188-2.84a26.78 26.78 0 01-4.437-4.4 5.6 5.6 0 01-1.054-3.54 4.807 4.807 0 014.666-4.57c1.863 0 3.216 1.54 3.943 2.37a1.52 1.52 0 001.059.76 1.731 1.731 0 001.151-.81c.794-.87 2.122-2.32 3.851-2.32a4.807 4.807 0 014.666 4.57 5.528 5.528 0 01-1.054 3.54z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                </div>
+                <p class="popular__name">Retro table</p>
+                <p class="popular__price">$29.00</p>
+              </a>
+            </li>
+            <li class="popular__item mix category-b category-c">
+              <a class="popular__link" href="#">
+                <img class="popular__img" src="images/popular/5.jpg" alt="popular images">
+                <div class="popular__items">
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M31.95 29.3l-4.588-4.59a8.827 8.827 0 01-2.651 2.65l4.588 4.59a1.874 1.874 0 002.651-2.65zM27.5 20a7.5 7.5 0 10-7.5 7.5 7.5 7.5 0 007.5-7.5zM20 25.62A5.625 5.625 0 1125.625 20 5.628 5.628 0 0120 25.62zM15.625 20h1.25A3.135 3.135 0 0120 16.87v-1.25A4.386 4.386 0 0015.625 20z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M12.314 14.13h2.333l3.323 12.04a.812.812 0 00.787.59h10.214a.821.821 0 00.746-.48l3.717-8.56a.836.836 0 00-.068-.78.813.813 0 00-.678-.37H21.4a.82.82 0 000 1.64h10.04l-3.011 6.92h-9.062L16.044 13.1a.808.808 0 00-.787-.6h-2.943a.815.815 0 000 1.63zm5.67 18.37a1.85 1.85 0 10-1.845-1.85 1.85 1.85 0 001.845 1.85zm11.53 0h.135a1.907 1.907 0 10-.135 0z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M33.49 19.32a6.208 6.208 0 00-1.849-4.1A5.871 5.871 0 0027.5 13.5c-2.311 0-3.948 1.78-4.827 2.74a2.156 2.156 0 01-.156.17l-.083-.09c-.8-.92-2.476-2.82-4.938-2.82a5.873 5.873 0 00-4.139 1.72 6.208 6.208 0 00-1.849 4.1 6.845 6.845 0 001.271 4.34 29.307 29.307 0 004.763 4.75c1.705 1.41 3.95 3.09 4.965 3.09 1.032 0 3.269-1.68 4.965-3.09a29.234 29.234 0 004.746-4.75 6.935 6.935 0 001.272-4.34zm-2.376 3.61a27 27 0 01-4.431 4.42c-2.406 2-3.831 2.79-4.172 2.82-.342-.03-1.77-.83-4.188-2.84a26.78 26.78 0 01-4.437-4.4 5.6 5.6 0 01-1.054-3.54 4.807 4.807 0 014.666-4.57c1.863 0 3.216 1.54 3.943 2.37a1.52 1.52 0 001.059.76 1.731 1.731 0 001.151-.81c.794-.87 2.122-2.32 3.851-2.32a4.807 4.807 0 014.666 4.57 5.528 5.528 0 01-1.054 3.54z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                </div>
+                <p class="popular__name">Wooden radio</p>
+                <p class="popular__price">$29.00</p>
+              </a>
+            </li>
+            <li class="popular__item mix category-a category-b">
+              <a class="popular__link" href="#">
+                <img class="popular__img" src="images/popular/6.jpg" alt="popular images">
+                <div class="popular__items">
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M31.95 29.3l-4.588-4.59a8.827 8.827 0 01-2.651 2.65l4.588 4.59a1.874 1.874 0 002.651-2.65zM27.5 20a7.5 7.5 0 10-7.5 7.5 7.5 7.5 0 007.5-7.5zM20 25.62A5.625 5.625 0 1125.625 20 5.628 5.628 0 0120 25.62zM15.625 20h1.25A3.135 3.135 0 0120 16.87v-1.25A4.386 4.386 0 0015.625 20z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M12.314 14.13h2.333l3.323 12.04a.812.812 0 00.787.59h10.214a.821.821 0 00.746-.48l3.717-8.56a.836.836 0 00-.068-.78.813.813 0 00-.678-.37H21.4a.82.82 0 000 1.64h10.04l-3.011 6.92h-9.062L16.044 13.1a.808.808 0 00-.787-.6h-2.943a.815.815 0 000 1.63zm5.67 18.37a1.85 1.85 0 10-1.845-1.85 1.85 1.85 0 001.845 1.85zm11.53 0h.135a1.907 1.907 0 10-.135 0z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M33.49 19.32a6.208 6.208 0 00-1.849-4.1A5.871 5.871 0 0027.5 13.5c-2.311 0-3.948 1.78-4.827 2.74a2.156 2.156 0 01-.156.17l-.083-.09c-.8-.92-2.476-2.82-4.938-2.82a5.873 5.873 0 00-4.139 1.72 6.208 6.208 0 00-1.849 4.1 6.845 6.845 0 001.271 4.34 29.307 29.307 0 004.763 4.75c1.705 1.41 3.95 3.09 4.965 3.09 1.032 0 3.269-1.68 4.965-3.09a29.234 29.234 0 004.746-4.75 6.935 6.935 0 001.272-4.34zm-2.376 3.61a27 27 0 01-4.431 4.42c-2.406 2-3.831 2.79-4.172 2.82-.342-.03-1.77-.83-4.188-2.84a26.78 26.78 0 01-4.437-4.4 5.6 5.6 0 01-1.054-3.54 4.807 4.807 0 014.666-4.57c1.863 0 3.216 1.54 3.943 2.37a1.52 1.52 0 001.059.76 1.731 1.731 0 001.151-.81c.794-.87 2.122-2.32 3.851-2.32a4.807 4.807 0 014.666 4.57 5.528 5.528 0 01-1.054 3.54z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                </div>
+                <p class="popular__name">Wooden chair</p>
+                <p class="popular__price">$29.00</p>
+              </a>
+            </li>
+            <li class="popular__item mix category-a">
+              <a class="popular__link" href="#">
+                <img class="popular__img" src="images/popular/7.jpg" alt="popular images">
+                <div class="popular__items">
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M31.95 29.3l-4.588-4.59a8.827 8.827 0 01-2.651 2.65l4.588 4.59a1.874 1.874 0 002.651-2.65zM27.5 20a7.5 7.5 0 10-7.5 7.5 7.5 7.5 0 007.5-7.5zM20 25.62A5.625 5.625 0 1125.625 20 5.628 5.628 0 0120 25.62zM15.625 20h1.25A3.135 3.135 0 0120 16.87v-1.25A4.386 4.386 0 0015.625 20z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M12.314 14.13h2.333l3.323 12.04a.812.812 0 00.787.59h10.214a.821.821 0 00.746-.48l3.717-8.56a.836.836 0 00-.068-.78.813.813 0 00-.678-.37H21.4a.82.82 0 000 1.64h10.04l-3.011 6.92h-9.062L16.044 13.1a.808.808 0 00-.787-.6h-2.943a.815.815 0 000 1.63zm5.67 18.37a1.85 1.85 0 10-1.845-1.85 1.85 1.85 0 001.845 1.85zm11.53 0h.135a1.907 1.907 0 10-.135 0z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M33.49 19.32a6.208 6.208 0 00-1.849-4.1A5.871 5.871 0 0027.5 13.5c-2.311 0-3.948 1.78-4.827 2.74a2.156 2.156 0 01-.156.17l-.083-.09c-.8-.92-2.476-2.82-4.938-2.82a5.873 5.873 0 00-4.139 1.72 6.208 6.208 0 00-1.849 4.1 6.845 6.845 0 001.271 4.34 29.307 29.307 0 004.763 4.75c1.705 1.41 3.95 3.09 4.965 3.09 1.032 0 3.269-1.68 4.965-3.09a29.234 29.234 0 004.746-4.75 6.935 6.935 0 001.272-4.34zm-2.376 3.61a27 27 0 01-4.431 4.42c-2.406 2-3.831 2.79-4.172 2.82-.342-.03-1.77-.83-4.188-2.84a26.78 26.78 0 01-4.437-4.4 5.6 5.6 0 01-1.054-3.54 4.807 4.807 0 014.666-4.57c1.863 0 3.216 1.54 3.943 2.37a1.52 1.52 0 001.059.76 1.731 1.731 0 001.151-.81c.794-.87 2.122-2.32 3.851-2.32a4.807 4.807 0 014.666 4.57 5.528 5.528 0 01-1.054 3.54z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                </div>
+                <p class="popular__name">White chair</p>
+                <p class="popular__price">$29.00</p>
+              </a>
+            </li>
+            <li class="popular__item mix category-c category-d">
+              <a class="popular__link" href="#">
+                <img class="popular__img" src="images/popular/8.jpg" alt="popular images">
+                <div class="popular__items">
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M31.95 29.3l-4.588-4.59a8.827 8.827 0 01-2.651 2.65l4.588 4.59a1.874 1.874 0 002.651-2.65zM27.5 20a7.5 7.5 0 10-7.5 7.5 7.5 7.5 0 007.5-7.5zM20 25.62A5.625 5.625 0 1125.625 20 5.628 5.628 0 0120 25.62zM15.625 20h1.25A3.135 3.135 0 0120 16.87v-1.25A4.386 4.386 0 0015.625 20z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M12.314 14.13h2.333l3.323 12.04a.812.812 0 00.787.59h10.214a.821.821 0 00.746-.48l3.717-8.56a.836.836 0 00-.068-.78.813.813 0 00-.678-.37H21.4a.82.82 0 000 1.64h10.04l-3.011 6.92h-9.062L16.044 13.1a.808.808 0 00-.787-.6h-2.943a.815.815 0 000 1.63zm5.67 18.37a1.85 1.85 0 10-1.845-1.85 1.85 1.85 0 001.845 1.85zm11.53 0h.135a1.907 1.907 0 10-.135 0z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                  <div class="popular__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                      <path data-name="Forma 1"
+                        d="M33.49 19.32a6.208 6.208 0 00-1.849-4.1A5.871 5.871 0 0027.5 13.5c-2.311 0-3.948 1.78-4.827 2.74a2.156 2.156 0 01-.156.17l-.083-.09c-.8-.92-2.476-2.82-4.938-2.82a5.873 5.873 0 00-4.139 1.72 6.208 6.208 0 00-1.849 4.1 6.845 6.845 0 001.271 4.34 29.307 29.307 0 004.763 4.75c1.705 1.41 3.95 3.09 4.965 3.09 1.032 0 3.269-1.68 4.965-3.09a29.234 29.234 0 004.746-4.75 6.935 6.935 0 001.272-4.34zm-2.376 3.61a27 27 0 01-4.431 4.42c-2.406 2-3.831 2.79-4.172 2.82-.342-.03-1.77-.83-4.188-2.84a26.78 26.78 0 01-4.437-4.4 5.6 5.6 0 01-1.054-3.54 4.807 4.807 0 014.666-4.57c1.863 0 3.216 1.54 3.943 2.37a1.52 1.52 0 001.059.76 1.731 1.731 0 001.151-.81c.794-.87 2.122-2.32 3.851-2.32a4.807 4.807 0 014.666 4.57 5.528 5.528 0 01-1.054 3.54z"
+                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
+                  </div>
+                </div>
+                <p class="popular__name">Retro table</p>
+                <p class="popular__price">$29.00</p>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -78,11 +368,7 @@
       <div class="footer-top">
         <div class="footer-top__item footer-top__contact">
           <a class="logo footer-top__logo" href="#">
-            <svg class="logo__svg" xmlns="http://www.w3.org/2000/svg" width="50.125" height="38.875">
-              <path data-name="Path 324"
-                d="M.157 28.674a1.13 1.13 0 00.622.387l48.041 9.8a1.137 1.137 0 00.908-.212.874.874 0 00.31-.8L43.787.77a.962.962 0 00-.449-.645 1.337 1.337 0 00-.965-.051L7.179 14.118a.9.9 0 00-.507.452C6.501 14.895.178 27.646.089 27.827a.806.806 0 00.068.847zm45.586 6.436l-20.05-11.145 10.339-2.159zm-37.7-18.883l12.526 6.983-17.833 3.715zm1.662-1.172L41.24 2.468l-5.558 17.587-12.371 2.584zM47.363 34.05l-9.779-13.4 4.9-15.52zm-3.886 1.9L5.426 28.187l17.523-3.65z"
-                fill="#a3bbc8" fill-rule="evenodd" /></svg>
-            Glee.
+            <img src="images/icons/logo.png" alt="logo">
           </a>
           <div class="footer-top__adress">
             ADDRESS: 4772 Wines Lane
@@ -95,6 +381,7 @@
             EMAIL: contact@Glee.com
           </a>
         </div>
+
         <div class="footer-top__item footer-top__nav">
           <div class="footer-top__title">
             Services
@@ -153,17 +440,25 @@
         <p class="footer-bottom__copy">
           ©2020 CopyRight Example. All rights reserved.
         </p>
-        <div class="footer-bottom__items">
-          <a class="footer-bottom__item" href="#">Home</a>
-          <a class="footer-bottom__item" href="#">About</a>
-          <a class="footer-bottom__item" href="#">Blog</a>
-          <a class="footer-bottom__item" href="#">Contact</a>
-        </div>
+        <ul class="footer-bottom__items">
+          <li class="footer-bottom__item">
+            <a class="footer-bottom__link" href="#">Home</a>
+          </li>
+          <li class="footer-bottom__item">
+            <a class="footer-bottom__link" href="#">About</a>
+          </li>
+          <li class="footer-bottom__item">
+            <a class="footer-bottom__link" href="#">Blog</a>
+          </li>
+          <li class="footer-bottom__item">
+            <a class="footer-bottom__link" href="#">Contact</a>
+          </li>
+        </ul>
       </div>
     </div>
   </footer>
-
-
+  <script src="js/mixitup.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 

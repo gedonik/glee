@@ -1,32 +1,22 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header {
   padding: 45px 0 45px;
-  margin-bottom: 45px;
-  background-color: #fff;
   @extend %rubik-700;
-
+  background-color: #fff;
 
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
-  .logo {
-    display: flex;
-    margin-right: 140px;
-    font-size: 36px;
-
-    &__svg {
-      margin-right: 10px;
-    }
-  }
 }
 
+// в макете очень много цветов, те которые редко используются в переменные не пихал
 .menu {
   &__list {
     display: flex;
@@ -35,6 +25,15 @@
 
   &__item:not(:last-child) {
     margin-right: 35px;
+  }
+
+  &__link {
+    padding-bottom: 5px;
+  }
+
+  &__link:hover {
+    border-bottom: 2px solid $default;
+    transition: color 0.5s;
   }
 }
 
@@ -52,12 +51,12 @@
   &__burger::after {
     content: '';
     position: absolute;
-    width: 50px;
-    height: 50px;
     top: -15px;
     left: -15px;
-    border-radius: 50%;
+    width: 50px;
+    height: 50px;
     background-color: #edf1f4;
+    border-radius: 50%;
     z-index: -1;
   }
 
@@ -74,8 +73,8 @@
   &__inner {
     display: flex;
     margin-right: 35px;
-    border-radius: 50px;
     background-color: $background;
+    border-radius: 50px;
   }
 
   &__link {
@@ -85,14 +84,15 @@
   &__link--heart::after {
     content: '';
     position: absolute;
-    width: 1px;
-    height: 32px;
     top: 11px;
     left: 88px;
+    width: 1px;
+    height: 32px;
     background-color: #fff;
     opacity: 0.4;
   }
 
+  // весь user-nav кривой что ппц
   &__heart {
     position: relative;
     padding: 22px 30px 13px 40px;
@@ -105,14 +105,14 @@
   &__num--heart,
   &__num--cart {
     position: absolute;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #fff;
     top: 15px;
     right: 23px;
+    width: 15px;
+    height: 15px;
     font-size: 10px;
     text-align: center;
+    background-color: #fff;
+    border-radius: 50%;
   }
 
   &__num--cart {
@@ -120,35 +120,304 @@
   }
 }
 
-.footer {
+.top-slider {
   background-color: #fff;
+
+  &__inner {
+    position: relative;
+    margin-bottom: 42px;
+  }
+
+  &__content {
+    position: absolute;
+    max-width: 470px;
+    width: 100%;
+    margin-top: 210px;
+    margin-left: 300px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    @extend %rubik-700;
+    font-size: 72px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: #243f4d;
+  }
+
+  &__text {
+    max-width: 350px;
+    margin-bottom: 38px;
+    @extend %rubik-500;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  &__btn {
+    position: relative;
+    padding: 20px 100px 20px 30px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: $btn;
+    cursor: pointer;
+  }
+
+  &__btn::after {
+    content: '';
+    position: absolute;
+    background-image: url(../images/icons/arrow-right.svg);
+    top: 25px;
+    right: 22px;
+    width: 22px;
+    height: 9px;
+  }
+
+  &__btn:hover {
+    color: $hov;
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: -75px;
+
+    li {
+      padding: 0 5px;
+
+      button {
+        position: relative;
+        width: 28px;
+        height: 28px;
+        font-size: 11px;
+        border-radius: 50%;
+        border: none;
+        color: #243f4d;
+        background-color: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+
+        &:hover {
+          background-color: #fff;
+        }
+      }
+
+      &.slick-active {
+        button {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+  .top-advantages {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(252, 215, 182, 0.3);
+
+    &__item {
+      position: relative;
+      width: calc(100%/3);
+      padding: 45px 145px 35px 220px;
+    }
+
+    &__item:not(:last-child) {
+      border-right: 1px solid #e8e4df;
+    }
+
+    &__item::before {
+      content: '';
+      position: absolute;
+      top: 50px;
+      left: 145px;
+    }
+
+    &__item--clock::before {
+      width: 53px;
+      height: 54px;
+      background-image: url(../images/icons/clock.png);
+    }
+
+    &__item--delivery::before {
+      width: 55px;
+      height: 37px;
+      background-image: url(../images/icons/delivery.png);
+    }
+
+    &__item--payment::before {
+      width: 54px;
+      height: 53px;
+      background-image: url(../images/icons/payment.png);
+    }
+
+    &__title {
+
+      @extend %dmsans-700;
+      font-size: 18px;
+    }
+
+    &__text {
+      line-height: 2;
+    }
+  }
+}
+
+.popular__wrapper {
+  max-width: 1770px;
+  padding: 70px 0 145px;
+  background-color: #f9f9f9;
+
+  .popular {
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__filter-btn {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 80px;
+      @extend %dmsans-700;
+      font-size: 16px;
+      color: #8b8b8b;
+    }
+
+    &__btn:hover {
+      color: #191919;
+    }
+
+    &__btn:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &__content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-right: -40px;
+      // тоже самое, только когда меньше 4 картинок, не могу по центру поставить
+      // display: grid;
+      // grid-template-columns: repeat(4, 2fr);
+      // grid-gap: 30px;
+    }
+
+    &__item {
+      position: relative;
+      margin: 0 40px 40px 0;
+      max-width: 270px;
+      height: 380px;
+      background-color: #fff;
+      border-radius: 5%;
+    }
+
+    &__img {
+      display: block;
+      margin: 0 auto 20px;
+      padding-top: 5px;
+    }
+
+    &__items {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      left: 0;
+      right: 0;
+      bottom: 155px;
+      text-align: center;
+      z-index: 1;
+      opacity: 0;
+    }
+
+    &__link:hover {
+      .popular__items {
+        opacity: 1;
+      }
+    }
+
+    &__icon {
+      width: 45px;
+      height: 45px;
+      background-color: #fff;
+      border-radius: 50%;
+    }
+
+    &__icon:not(:last-child) {
+      margin-right: 40px;
+    }
+
+    &__icon:hover {
+      fill: #fff;
+      background-color: #a3bbc8;
+
+      svg path {
+        fill: #fff;
+      }
+    }
+
+    &__name,
+    &__price {
+      text-align: center;
+      font-size: 16px;
+      @extend %dmsans-700;
+      color: #243f4d;
+    }
+
+    &__name {
+      margin-bottom: 10px;
+    }
+
+    &__price {
+      color: $btn;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
   @extend %rubik-500;
+  background-color: #fff;
 }
 
 .footer-top {
-  padding: 80px 0 65px;
-  border-bottom: 1px solid #dae4e9;
   display: flex;
+  padding: 80px 0 65px;
   font-size: 14px;
   line-height: 1.5;
+  border-bottom: 1px solid #dae4e9;
   color: #7b7b7b;
+
+  &__logo img {
+    margin-bottom: 30px;
+  }
+
+  &__phone:hover,
+  &__email:hover,
+  &__link:hover,
+  &__form-btn:hover {
+    color: $hov;
+    transition: color 0.5s;
+  }
 
   &__contact {
     width: 200px;
     margin-right: 100px;
-  }
-
-  .logo {
-    display: flex;
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: $default;
-    align-items: center;
-    @extend %rubik-700;
-
-    &__svg {
-      margin-right: 10px;
-    }
   }
 
   &__adress,
@@ -160,26 +429,26 @@
   &__nav {
     width: 170px;
     margin-right: 130px;
-    margin-top: 25px;
+    margin-top: 18px;
   }
 
   &__form {
     max-width: 270px;
-    margin-top: 25px;
+    margin-top: 18px;
   }
 
   &__title {
+    margin-bottom: 20px;
     font-size: 16px;
+    @extend %dmsans-700;
     line-height: 1.3;
     text-transform: uppercase;
-    margin-bottom: 20px;
     color: #1f2044;
-    @extend %dmsans-700;
   }
 
   &__link {
-    margin-bottom: 10px;
     display: block;
+    margin-bottom: 10px;
   }
 
   &__text {
@@ -187,15 +456,15 @@
   }
 
   &__form-input {
-    background-color: #fef7f0;
     max-width: 170px;
     width: 100%;
-    border: none;
-    outline: none;
-    color: #234969;
     padding: 13px 15px 11px 15px;
     font-size: 12px;
     line-height: 1.2;
+    color: #234969;
+    background-color: #fef7f0;
+    border: none;
+    outline: none;
 
     &::placeholder {
       color: #234969;
@@ -203,12 +472,12 @@
   }
 
   &__form-btn {
-    border: none;
-    outline: none;
-    background-color: $btn;
-    color: #fff;
     padding: 9px 20px 8px 15px;
     margin-left: -3px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: $btn;
     cursor: pointer;
   }
 }
@@ -218,25 +487,31 @@
   justify-content: space-between;
   padding: 35px 0 40px;
   font-size: 14px;
-  color: #7b7b7b;
   line-height: 1.5;
+  color: #7b7b7b;
 
   &__items {
     display: flex;
   }
 
+  // не всовывается с footer-top
+  &__item:hover {
+    color: $hov;
+    transition: color 0.5s;
+  }
+
   &__item:not(:last-child) {
-    margin-right: 35px;
     position: relative;
+    margin-right: 35px;
   }
 
   &__item:not(:last-child)::after {
     content: '';
     position: absolute;
-    width: 2px;
-    height: 18px;
     top: 1px;
     right: -17px;
+    width: 2px;
+    height: 18px;
     background-color: #7b7b7b;
     opacity: 0.4;
   }
