@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Glee</title>
+  <link rel="icon" href="images/icons/logo_fav.png" type="image/x-icon">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -13,95 +14,149 @@
   <header class="header">
     <div class="wrapper">
 
-      <div class="header__inner">
-        <a class="logo" href="#">
-          <img src="images/icons/logo.png" alt="logo">
+      <nav class="menu header__inner">
+
+        <a class="logo header__logo" href="#">
+          <img src="images/svg/logo.svg" alt="logo">
         </a>
 
-        <nav class="menu">
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a class="menu__link" href="#">Home +</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">About</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Services</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Pages +</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">News</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Contect</a>
-            </li>
-          </ul>
-        </nav>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <span class="visually-hidden">Home link</span>
+            <a class="menu__link" href="#">Home +</a>
+          </li>
+          <li class="menu__item">
+            <span class="visually-hidden">About link</span>
+            <a class="menu__link" href="#">About</a>
+          </li>
+          <li class="menu__item">
+            <span class="visually-hidden">Services link</span>
+            <a class="menu__link" href="#">Services</a>
+          </li>
+          <li class="menu__item">
+            <span class="visually-hidden">Pages link</span>
+            <a class="menu__link" href="#">Pages +</a>
+          </li>
+          <li class="menu__item">
+            <span class="visually-hidden">News link</span>
+            <a class="menu__link" href="#">News</a>
+          </li>
+          <li class="menu__item">
+            <span class="visually-hidden">Contact link</span>
+            <a class="menu__link" href="#">Contact</a>
+          </li>
+        </ul>
 
         <div class="user-nav">
-          <a class="user-nav__link user-nav__search" href="#">
-            <img class="user-nav__img" src="images/icons/search.png" alt="search">
-          </a>
+          <button class="btn user-nav__search" type="button" href="#">
+            <span class="visually-hidden">Search button</span>
+            <svg class="user-nav__img" width='19px' height='17px'>
+              <use xlink:href='images/sprite.svg#search'></use>
+            </svg>
+          </button>
           <div class="user-nav__inner">
             <a class="user-nav__link user-nav__link--heart" href="#">
-              <img class="user-nav__heart" src="images/icons/heart.png" alt="heart">
-              <span class="user-nav__num--heart">0</span>
+              <span class="visually-hidden">Favourites link</span>
+              <svg class="user-nav__img" width='19px' height='17px'>
+                <use xlink:href='images/sprite.svg#heart'></use>
+              </svg>
+              <span class="visually-hidden">Favourites number</span>
+              <span class="user-nav__num">0</span>
             </a>
-            <a class="user-nav__link" href="#">
-              <img class="user-nav__cart" src="images/icons/cart.png" alt="cart">
-              <span class="user-nav__num--cart">0</span>
+            <a class="user-nav__link user-nav__link--cart" href="#">
+              <span class="visually-hidden">Cart link</span>
+              <svg class="user-nav__img" width='19px' height='18px'>
+                <use xlink:href='images/sprite.svg#cart'></use>
+              </svg>
+              <span class="visually-hidden">Cart number</span>
+              <span class="user-nav__num user-nav__num--cart">0</span>
             </a>
           </div>
-          <a class="user-nav__link user-nav__burger" href="#">
-            <img src="images/icons/burger1.png" alt="burger">
-          </a>
+          <button class="btn user-nav__burger" type="button" href="#">
+            <span class="visually-hidden">Menu button</span>
+            <svg class="user-nav__img" width='19px' height='17px'>
+              <use xlink:href='images/sprite.svg#burger'></use>
+            </svg>
+          </button>
         </div>
 
-      </div>
+      </nav>
     </div>
   </header>
 
   <main class="main">
+    <h1 class="visually-hidden"></h1>
+
     <section class="top-slider">
       <div class="wrapper">
+        <h2 class="visually-hidden"></h2>
 
-        <div class="top-slider__inner">
-          <div class="top-slider__item">
+        <ul class="top-slider__inner">
+          <li class="top-slider__item">
             <div class="top-slider__content">
               <p class="top-slider__title">Smart and trendy</p>
-              <p class="top-slider__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-              </p>
-              <button class="top-slider__btn" type="submit">Shop Now</button>
+              <div class="top-slider__text">
+                <p>Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                </p>
+              </div>
+              <a class="link-btn" href="#">
+                <span class="visually-hidden">Shop Now link</span>
+                Shop Now
+                <svg class="user-nav__img" width='22px' height='9px'>
+                  <use xlink:href='images/sprite.svg#arrow-right'></use>
+                </svg>
+              </a>
             </div>
-            <img class="top-slider__img" src="images/slider/1.jpg" alt="">
-          </div>
-          <div class="top-slider__item">
+            <div class="top-slider__img">
+              <img src="images/slider/1.png" alt="slide 1">
+            </div>
+          </li>
+          <li class="top-slider__item">
             <div class="top-slider__content">
               <p class="top-slider__title">Smart and trendy</p>
-              <p class="top-slider__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-              </p>
-              <button class="top-slider__btn" type="submit">Shop Now</button>
+              <div class="top-slider__text">
+                <p>Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                </p>
+              </div>
+              <a class="link-btn" href="#">
+                <span class="visually-hidden">Shop Now link</span>
+                Shop Now
+                <svg class="user-nav__img" width='22px' height='9px'>
+                  <use xlink:href='images/sprite.svg#arrow-right'></use>
+                </svg>
+              </a>
             </div>
-            <img class="top-slider__img" src="images/slider/1.jpg" alt="">
-          </div>
-          <div class="top-slider__item">
+            <div class="top-slider__img">
+              <img src="images/slider/1.png" alt="slide 2">
+            </div>
+          </li>
+          <li class="top-slider__item">
             <div class="top-slider__content">
               <p class="top-slider__title">Smart and trendy</p>
-              <p class="top-slider__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-              </p>
-              <button class="top-slider__btn" type="submit">Shop Now</button>
+              <div class="top-slider__text">
+                <p>Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                </p>
+              </div>
+              <a class="link-btn" href="#">
+                <span class="visually-hidden">Shop Now link</span>
+                Shop Now
+                <svg class="user-nav__img" width='22px' height='9px'>
+                  <use xlink:href='images/sprite.svg#arrow-right'></use>
+                </svg>
+              </a>
             </div>
-            <img class="top-slider__img" src="images/slider/1.jpg" alt="">
-          </div>
-        </div>
+            <div class="top-slider__img">
+              <img src="images/slider/1.png" alt="slide 3">
+            </div>
+          </li>
+        </ul>
 
         <ul class="top-advantages">
           <li class="top-advantages__item top-advantages__item--clock">
             <p class="top-advantages__title">Support 24/7.</p>
-            <p class="top-advantages__text">Contact us 24 hours a day, <br> 7 days a week.</p>
+            <div class="top-advantages__text">
+              <p>Contact us 24 hours a day,<br>7 days a week.</p>
+            </div>
           </li>
           <li class="top-advantages__item top-advantages__item--delivery">
             <p class="top-advantages__title">Delivery.</p>
@@ -109,7 +164,9 @@
           </li>
           <li class="top-advantages__item top-advantages__item--payment">
             <p class="top-advantages__title">100% Payment secure.</p>
-            <p class="top-advantages__text">We ensure secure payment with PEV.</p>
+            <div class="top-advantages__text">
+              <p>We ensure secure payment with PEV.</p>
+            </div>
           </li>
         </ul>
 
@@ -117,348 +174,956 @@
     </section>
 
     <section class="popular">
-      <div class="wrapper popular__wrapper">
-        <div class="container">
-          <h1 class="title popular__title">Products of the week</h1>
-          <ul class="popular__filter-btn">
-            <li class="popular__btn">
-              <a href="#" data-filter="all">All</a>
-            </li>
-            <li class="popular__btn">
-              <a href="#" data-filter=".category-a">Furnitures</a>
-            </li>
-            <li class="popular__btn">
-              <a href="#" data-filter=".category-b">Chairs</a>
-            </li>
-            <li class="popular__btn">
-              <a href="#" data-filter=".category-c">Lighting</a>
-            </li>
-            <li class="popular__btn">
-              <a href="#" data-filter=".category-d">Decor</a>
-            </li>
-          </ul>
-          <!-- не совсем ровно вышло. картинки разного размера и поставить их ровно для меня тяжело, способ который я нашел - в фотошопе при скачивании картинок задавал всем одинаковый размер холста, и белое на белом конечно мега ход =) -->
-          <ul class="popular__content">
-            <li class="popular__item mix category-a category-b">
-              <a class="popular__link" href="#">
-                <img class="popular__img" src="images/popular/1.jpg" alt="popular images">
-                <div class="popular__items">
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M31.95 29.3l-4.588-4.59a8.827 8.827 0 01-2.651 2.65l4.588 4.59a1.874 1.874 0 002.651-2.65zM27.5 20a7.5 7.5 0 10-7.5 7.5 7.5 7.5 0 007.5-7.5zM20 25.62A5.625 5.625 0 1125.625 20 5.628 5.628 0 0120 25.62zM15.625 20h1.25A3.135 3.135 0 0120 16.87v-1.25A4.386 4.386 0 0015.625 20z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M12.314 14.13h2.333l3.323 12.04a.812.812 0 00.787.59h10.214a.821.821 0 00.746-.48l3.717-8.56a.836.836 0 00-.068-.78.813.813 0 00-.678-.37H21.4a.82.82 0 000 1.64h10.04l-3.011 6.92h-9.062L16.044 13.1a.808.808 0 00-.787-.6h-2.943a.815.815 0 000 1.63zm5.67 18.37a1.85 1.85 0 10-1.845-1.85 1.85 1.85 0 001.845 1.85zm11.53 0h.135a1.907 1.907 0 10-.135 0z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M33.49 19.32a6.208 6.208 0 00-1.849-4.1A5.871 5.871 0 0027.5 13.5c-2.311 0-3.948 1.78-4.827 2.74a2.156 2.156 0 01-.156.17l-.083-.09c-.8-.92-2.476-2.82-4.938-2.82a5.873 5.873 0 00-4.139 1.72 6.208 6.208 0 00-1.849 4.1 6.845 6.845 0 001.271 4.34 29.307 29.307 0 004.763 4.75c1.705 1.41 3.95 3.09 4.965 3.09 1.032 0 3.269-1.68 4.965-3.09a29.234 29.234 0 004.746-4.75 6.935 6.935 0 001.272-4.34zm-2.376 3.61a27 27 0 01-4.431 4.42c-2.406 2-3.831 2.79-4.172 2.82-.342-.03-1.77-.83-4.188-2.84a26.78 26.78 0 01-4.437-4.4 5.6 5.6 0 01-1.054-3.54 4.807 4.807 0 014.666-4.57c1.863 0 3.216 1.54 3.943 2.37a1.52 1.52 0 001.059.76 1.731 1.731 0 001.151-.81c.794-.87 2.122-2.32 3.851-2.32a4.807 4.807 0 014.666 4.57 5.528 5.528 0 01-1.054 3.54z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                </div>
-                <p class="popular__name">Wooden radio</p>
-                <p class="popular__price">$29.00</p>
-              </a>
-            </li>
-            <li class="popular__item mix category-a category-b category-d">
-              <a class="popular__link" href="#">
-                <img class="popular__img" src="images/popular/2.jpg" alt="popular images">
-                <div class="popular__items">
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M31.95 29.3l-4.588-4.59a8.827 8.827 0 01-2.651 2.65l4.588 4.59a1.874 1.874 0 002.651-2.65zM27.5 20a7.5 7.5 0 10-7.5 7.5 7.5 7.5 0 007.5-7.5zM20 25.62A5.625 5.625 0 1125.625 20 5.628 5.628 0 0120 25.62zM15.625 20h1.25A3.135 3.135 0 0120 16.87v-1.25A4.386 4.386 0 0015.625 20z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M12.314 14.13h2.333l3.323 12.04a.812.812 0 00.787.59h10.214a.821.821 0 00.746-.48l3.717-8.56a.836.836 0 00-.068-.78.813.813 0 00-.678-.37H21.4a.82.82 0 000 1.64h10.04l-3.011 6.92h-9.062L16.044 13.1a.808.808 0 00-.787-.6h-2.943a.815.815 0 000 1.63zm5.67 18.37a1.85 1.85 0 10-1.845-1.85 1.85 1.85 0 001.845 1.85zm11.53 0h.135a1.907 1.907 0 10-.135 0z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M33.49 19.32a6.208 6.208 0 00-1.849-4.1A5.871 5.871 0 0027.5 13.5c-2.311 0-3.948 1.78-4.827 2.74a2.156 2.156 0 01-.156.17l-.083-.09c-.8-.92-2.476-2.82-4.938-2.82a5.873 5.873 0 00-4.139 1.72 6.208 6.208 0 00-1.849 4.1 6.845 6.845 0 001.271 4.34 29.307 29.307 0 004.763 4.75c1.705 1.41 3.95 3.09 4.965 3.09 1.032 0 3.269-1.68 4.965-3.09a29.234 29.234 0 004.746-4.75 6.935 6.935 0 001.272-4.34zm-2.376 3.61a27 27 0 01-4.431 4.42c-2.406 2-3.831 2.79-4.172 2.82-.342-.03-1.77-.83-4.188-2.84a26.78 26.78 0 01-4.437-4.4 5.6 5.6 0 01-1.054-3.54 4.807 4.807 0 014.666-4.57c1.863 0 3.216 1.54 3.943 2.37a1.52 1.52 0 001.059.76 1.731 1.731 0 001.151-.81c.794-.87 2.122-2.32 3.851-2.32a4.807 4.807 0 014.666 4.57 5.528 5.528 0 01-1.054 3.54z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                </div>
-                <p class="popular__name">Wooden chair</p>
-                <p class="popular__price">$29.00</p>
-              </a>
-            </li>
-            <li class="popular__item mix category-b category-d">
-              <a class="popular__link" href="#">
-                <img class="popular__img" src="images/popular/3.jpg" alt="popular images">
-                <div class="popular__items">
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M31.95 29.3l-4.588-4.59a8.827 8.827 0 01-2.651 2.65l4.588 4.59a1.874 1.874 0 002.651-2.65zM27.5 20a7.5 7.5 0 10-7.5 7.5 7.5 7.5 0 007.5-7.5zM20 25.62A5.625 5.625 0 1125.625 20 5.628 5.628 0 0120 25.62zM15.625 20h1.25A3.135 3.135 0 0120 16.87v-1.25A4.386 4.386 0 0015.625 20z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M12.314 14.13h2.333l3.323 12.04a.812.812 0 00.787.59h10.214a.821.821 0 00.746-.48l3.717-8.56a.836.836 0 00-.068-.78.813.813 0 00-.678-.37H21.4a.82.82 0 000 1.64h10.04l-3.011 6.92h-9.062L16.044 13.1a.808.808 0 00-.787-.6h-2.943a.815.815 0 000 1.63zm5.67 18.37a1.85 1.85 0 10-1.845-1.85 1.85 1.85 0 001.845 1.85zm11.53 0h.135a1.907 1.907 0 10-.135 0z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M33.49 19.32a6.208 6.208 0 00-1.849-4.1A5.871 5.871 0 0027.5 13.5c-2.311 0-3.948 1.78-4.827 2.74a2.156 2.156 0 01-.156.17l-.083-.09c-.8-.92-2.476-2.82-4.938-2.82a5.873 5.873 0 00-4.139 1.72 6.208 6.208 0 00-1.849 4.1 6.845 6.845 0 001.271 4.34 29.307 29.307 0 004.763 4.75c1.705 1.41 3.95 3.09 4.965 3.09 1.032 0 3.269-1.68 4.965-3.09a29.234 29.234 0 004.746-4.75 6.935 6.935 0 001.272-4.34zm-2.376 3.61a27 27 0 01-4.431 4.42c-2.406 2-3.831 2.79-4.172 2.82-.342-.03-1.77-.83-4.188-2.84a26.78 26.78 0 01-4.437-4.4 5.6 5.6 0 01-1.054-3.54 4.807 4.807 0 014.666-4.57c1.863 0 3.216 1.54 3.943 2.37a1.52 1.52 0 001.059.76 1.731 1.731 0 001.151-.81c.794-.87 2.122-2.32 3.851-2.32a4.807 4.807 0 014.666 4.57 5.528 5.528 0 01-1.054 3.54z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                </div>
-                <p class="popular__name">White chair</p>
-                <p class="popular__price">$29.00</p>
-              </a>
-            </li>
-            <li class="popular__item mix category-b">
-              <a class="popular__link" href="#">
-                <img class="popular__img" src="images/popular/4.jpg" alt="popular images">
-                <div class="popular__items">
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M31.95 29.3l-4.588-4.59a8.827 8.827 0 01-2.651 2.65l4.588 4.59a1.874 1.874 0 002.651-2.65zM27.5 20a7.5 7.5 0 10-7.5 7.5 7.5 7.5 0 007.5-7.5zM20 25.62A5.625 5.625 0 1125.625 20 5.628 5.628 0 0120 25.62zM15.625 20h1.25A3.135 3.135 0 0120 16.87v-1.25A4.386 4.386 0 0015.625 20z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M12.314 14.13h2.333l3.323 12.04a.812.812 0 00.787.59h10.214a.821.821 0 00.746-.48l3.717-8.56a.836.836 0 00-.068-.78.813.813 0 00-.678-.37H21.4a.82.82 0 000 1.64h10.04l-3.011 6.92h-9.062L16.044 13.1a.808.808 0 00-.787-.6h-2.943a.815.815 0 000 1.63zm5.67 18.37a1.85 1.85 0 10-1.845-1.85 1.85 1.85 0 001.845 1.85zm11.53 0h.135a1.907 1.907 0 10-.135 0z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M33.49 19.32a6.208 6.208 0 00-1.849-4.1A5.871 5.871 0 0027.5 13.5c-2.311 0-3.948 1.78-4.827 2.74a2.156 2.156 0 01-.156.17l-.083-.09c-.8-.92-2.476-2.82-4.938-2.82a5.873 5.873 0 00-4.139 1.72 6.208 6.208 0 00-1.849 4.1 6.845 6.845 0 001.271 4.34 29.307 29.307 0 004.763 4.75c1.705 1.41 3.95 3.09 4.965 3.09 1.032 0 3.269-1.68 4.965-3.09a29.234 29.234 0 004.746-4.75 6.935 6.935 0 001.272-4.34zm-2.376 3.61a27 27 0 01-4.431 4.42c-2.406 2-3.831 2.79-4.172 2.82-.342-.03-1.77-.83-4.188-2.84a26.78 26.78 0 01-4.437-4.4 5.6 5.6 0 01-1.054-3.54 4.807 4.807 0 014.666-4.57c1.863 0 3.216 1.54 3.943 2.37a1.52 1.52 0 001.059.76 1.731 1.731 0 001.151-.81c.794-.87 2.122-2.32 3.851-2.32a4.807 4.807 0 014.666 4.57 5.528 5.528 0 01-1.054 3.54z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                </div>
-                <p class="popular__name">Retro table</p>
-                <p class="popular__price">$29.00</p>
-              </a>
-            </li>
-            <li class="popular__item mix category-b category-c">
-              <a class="popular__link" href="#">
-                <img class="popular__img" src="images/popular/5.jpg" alt="popular images">
-                <div class="popular__items">
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M31.95 29.3l-4.588-4.59a8.827 8.827 0 01-2.651 2.65l4.588 4.59a1.874 1.874 0 002.651-2.65zM27.5 20a7.5 7.5 0 10-7.5 7.5 7.5 7.5 0 007.5-7.5zM20 25.62A5.625 5.625 0 1125.625 20 5.628 5.628 0 0120 25.62zM15.625 20h1.25A3.135 3.135 0 0120 16.87v-1.25A4.386 4.386 0 0015.625 20z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M12.314 14.13h2.333l3.323 12.04a.812.812 0 00.787.59h10.214a.821.821 0 00.746-.48l3.717-8.56a.836.836 0 00-.068-.78.813.813 0 00-.678-.37H21.4a.82.82 0 000 1.64h10.04l-3.011 6.92h-9.062L16.044 13.1a.808.808 0 00-.787-.6h-2.943a.815.815 0 000 1.63zm5.67 18.37a1.85 1.85 0 10-1.845-1.85 1.85 1.85 0 001.845 1.85zm11.53 0h.135a1.907 1.907 0 10-.135 0z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M33.49 19.32a6.208 6.208 0 00-1.849-4.1A5.871 5.871 0 0027.5 13.5c-2.311 0-3.948 1.78-4.827 2.74a2.156 2.156 0 01-.156.17l-.083-.09c-.8-.92-2.476-2.82-4.938-2.82a5.873 5.873 0 00-4.139 1.72 6.208 6.208 0 00-1.849 4.1 6.845 6.845 0 001.271 4.34 29.307 29.307 0 004.763 4.75c1.705 1.41 3.95 3.09 4.965 3.09 1.032 0 3.269-1.68 4.965-3.09a29.234 29.234 0 004.746-4.75 6.935 6.935 0 001.272-4.34zm-2.376 3.61a27 27 0 01-4.431 4.42c-2.406 2-3.831 2.79-4.172 2.82-.342-.03-1.77-.83-4.188-2.84a26.78 26.78 0 01-4.437-4.4 5.6 5.6 0 01-1.054-3.54 4.807 4.807 0 014.666-4.57c1.863 0 3.216 1.54 3.943 2.37a1.52 1.52 0 001.059.76 1.731 1.731 0 001.151-.81c.794-.87 2.122-2.32 3.851-2.32a4.807 4.807 0 014.666 4.57 5.528 5.528 0 01-1.054 3.54z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                </div>
-                <p class="popular__name">Wooden radio</p>
-                <p class="popular__price">$29.00</p>
-              </a>
-            </li>
-            <li class="popular__item mix category-a category-b">
-              <a class="popular__link" href="#">
-                <img class="popular__img" src="images/popular/6.jpg" alt="popular images">
-                <div class="popular__items">
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M31.95 29.3l-4.588-4.59a8.827 8.827 0 01-2.651 2.65l4.588 4.59a1.874 1.874 0 002.651-2.65zM27.5 20a7.5 7.5 0 10-7.5 7.5 7.5 7.5 0 007.5-7.5zM20 25.62A5.625 5.625 0 1125.625 20 5.628 5.628 0 0120 25.62zM15.625 20h1.25A3.135 3.135 0 0120 16.87v-1.25A4.386 4.386 0 0015.625 20z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M12.314 14.13h2.333l3.323 12.04a.812.812 0 00.787.59h10.214a.821.821 0 00.746-.48l3.717-8.56a.836.836 0 00-.068-.78.813.813 0 00-.678-.37H21.4a.82.82 0 000 1.64h10.04l-3.011 6.92h-9.062L16.044 13.1a.808.808 0 00-.787-.6h-2.943a.815.815 0 000 1.63zm5.67 18.37a1.85 1.85 0 10-1.845-1.85 1.85 1.85 0 001.845 1.85zm11.53 0h.135a1.907 1.907 0 10-.135 0z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M33.49 19.32a6.208 6.208 0 00-1.849-4.1A5.871 5.871 0 0027.5 13.5c-2.311 0-3.948 1.78-4.827 2.74a2.156 2.156 0 01-.156.17l-.083-.09c-.8-.92-2.476-2.82-4.938-2.82a5.873 5.873 0 00-4.139 1.72 6.208 6.208 0 00-1.849 4.1 6.845 6.845 0 001.271 4.34 29.307 29.307 0 004.763 4.75c1.705 1.41 3.95 3.09 4.965 3.09 1.032 0 3.269-1.68 4.965-3.09a29.234 29.234 0 004.746-4.75 6.935 6.935 0 001.272-4.34zm-2.376 3.61a27 27 0 01-4.431 4.42c-2.406 2-3.831 2.79-4.172 2.82-.342-.03-1.77-.83-4.188-2.84a26.78 26.78 0 01-4.437-4.4 5.6 5.6 0 01-1.054-3.54 4.807 4.807 0 014.666-4.57c1.863 0 3.216 1.54 3.943 2.37a1.52 1.52 0 001.059.76 1.731 1.731 0 001.151-.81c.794-.87 2.122-2.32 3.851-2.32a4.807 4.807 0 014.666 4.57 5.528 5.528 0 01-1.054 3.54z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                </div>
-                <p class="popular__name">Wooden chair</p>
-                <p class="popular__price">$29.00</p>
-              </a>
-            </li>
-            <li class="popular__item mix category-a">
-              <a class="popular__link" href="#">
-                <img class="popular__img" src="images/popular/7.jpg" alt="popular images">
-                <div class="popular__items">
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M31.95 29.3l-4.588-4.59a8.827 8.827 0 01-2.651 2.65l4.588 4.59a1.874 1.874 0 002.651-2.65zM27.5 20a7.5 7.5 0 10-7.5 7.5 7.5 7.5 0 007.5-7.5zM20 25.62A5.625 5.625 0 1125.625 20 5.628 5.628 0 0120 25.62zM15.625 20h1.25A3.135 3.135 0 0120 16.87v-1.25A4.386 4.386 0 0015.625 20z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M12.314 14.13h2.333l3.323 12.04a.812.812 0 00.787.59h10.214a.821.821 0 00.746-.48l3.717-8.56a.836.836 0 00-.068-.78.813.813 0 00-.678-.37H21.4a.82.82 0 000 1.64h10.04l-3.011 6.92h-9.062L16.044 13.1a.808.808 0 00-.787-.6h-2.943a.815.815 0 000 1.63zm5.67 18.37a1.85 1.85 0 10-1.845-1.85 1.85 1.85 0 001.845 1.85zm11.53 0h.135a1.907 1.907 0 10-.135 0z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M33.49 19.32a6.208 6.208 0 00-1.849-4.1A5.871 5.871 0 0027.5 13.5c-2.311 0-3.948 1.78-4.827 2.74a2.156 2.156 0 01-.156.17l-.083-.09c-.8-.92-2.476-2.82-4.938-2.82a5.873 5.873 0 00-4.139 1.72 6.208 6.208 0 00-1.849 4.1 6.845 6.845 0 001.271 4.34 29.307 29.307 0 004.763 4.75c1.705 1.41 3.95 3.09 4.965 3.09 1.032 0 3.269-1.68 4.965-3.09a29.234 29.234 0 004.746-4.75 6.935 6.935 0 001.272-4.34zm-2.376 3.61a27 27 0 01-4.431 4.42c-2.406 2-3.831 2.79-4.172 2.82-.342-.03-1.77-.83-4.188-2.84a26.78 26.78 0 01-4.437-4.4 5.6 5.6 0 01-1.054-3.54 4.807 4.807 0 014.666-4.57c1.863 0 3.216 1.54 3.943 2.37a1.52 1.52 0 001.059.76 1.731 1.731 0 001.151-.81c.794-.87 2.122-2.32 3.851-2.32a4.807 4.807 0 014.666 4.57 5.528 5.528 0 01-1.054 3.54z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                </div>
-                <p class="popular__name">White chair</p>
-                <p class="popular__price">$29.00</p>
-              </a>
-            </li>
-            <li class="popular__item mix category-c category-d">
-              <a class="popular__link" href="#">
-                <img class="popular__img" src="images/popular/8.jpg" alt="popular images">
-                <div class="popular__items">
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M31.95 29.3l-4.588-4.59a8.827 8.827 0 01-2.651 2.65l4.588 4.59a1.874 1.874 0 002.651-2.65zM27.5 20a7.5 7.5 0 10-7.5 7.5 7.5 7.5 0 007.5-7.5zM20 25.62A5.625 5.625 0 1125.625 20 5.628 5.628 0 0120 25.62zM15.625 20h1.25A3.135 3.135 0 0120 16.87v-1.25A4.386 4.386 0 0015.625 20z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M12.314 14.13h2.333l3.323 12.04a.812.812 0 00.787.59h10.214a.821.821 0 00.746-.48l3.717-8.56a.836.836 0 00-.068-.78.813.813 0 00-.678-.37H21.4a.82.82 0 000 1.64h10.04l-3.011 6.92h-9.062L16.044 13.1a.808.808 0 00-.787-.6h-2.943a.815.815 0 000 1.63zm5.67 18.37a1.85 1.85 0 10-1.845-1.85 1.85 1.85 0 001.845 1.85zm11.53 0h.135a1.907 1.907 0 10-.135 0z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                  <div class="popular__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45">
-                      <path data-name="Forma 1"
-                        d="M33.49 19.32a6.208 6.208 0 00-1.849-4.1A5.871 5.871 0 0027.5 13.5c-2.311 0-3.948 1.78-4.827 2.74a2.156 2.156 0 01-.156.17l-.083-.09c-.8-.92-2.476-2.82-4.938-2.82a5.873 5.873 0 00-4.139 1.72 6.208 6.208 0 00-1.849 4.1 6.845 6.845 0 001.271 4.34 29.307 29.307 0 004.763 4.75c1.705 1.41 3.95 3.09 4.965 3.09 1.032 0 3.269-1.68 4.965-3.09a29.234 29.234 0 004.746-4.75 6.935 6.935 0 001.272-4.34zm-2.376 3.61a27 27 0 01-4.431 4.42c-2.406 2-3.831 2.79-4.172 2.82-.342-.03-1.77-.83-4.188-2.84a26.78 26.78 0 01-4.437-4.4 5.6 5.6 0 01-1.054-3.54 4.807 4.807 0 014.666-4.57c1.863 0 3.216 1.54 3.943 2.37a1.52 1.52 0 001.059.76 1.731 1.731 0 001.151-.81c.794-.87 2.122-2.32 3.851-2.32a4.807 4.807 0 014.666 4.57 5.528 5.528 0 01-1.054 3.54z"
-                        fill="#a3bbc8" fill-rule="evenodd" /></svg>
-                  </div>
-                </div>
-                <p class="popular__name">Retro table</p>
-                <p class="popular__price">$29.00</p>
-              </a>
-            </li>
-          </ul>
+      <div class="container">
 
+        <h2 class="title popular__title">Products of the week</h2>
+        <ul class="mix-nav">
+          <li class="btn mix-nav__button">
+            <span class="visually-hidden">All button</span>
+            <button class="btn mix-nav__btn" href="#" type="button" data-filter="all">All</button>
+          </li>
+          <li class="mix-nav__button">
+            <span class="visually-hidden">Furnitures button</span>
+            <button class="btn mix-nav__btn" href="#" type="button" data-filter=".category-a">Furnitures</button>
+          </li>
+          <li class="mix-nav__button">
+            <span class="visually-hidden">Chairs button</span>
+            <button class="btn mix-nav__btn" href="#" type="button" data-filter=".category-b">Chairs</button>
+          </li>
+          <li class="mix-nav__button">
+            <span class="visually-hidden">Lighting button</span>
+            <button class="btn mix-nav__btn" href="#" type="button" data-filter=".category-c">Lighting</button>
+          </li>
+          <li class="mix-nav__button">
+            <span class="visually-hidden">Decor button</span>
+            <button class="btn mix-nav__btn" href="#" type="button" data-filter=".category-d">Decor</button>
+          </li>
+        </ul>
+
+        <ul class="mix-nav__content">
+          <li class="mix-nav__item mix category-a category-b">
+
+            <article class="product-card" href="#">
+              <span class="visually-hidden">First product card</span>
+              <div class="product-card__inner">
+                <img class="product-card__img" src="images/popular/1.jpg" alt="product-card image">
+                <ul class="product-card__items">
+                  <li class="product-card__icon">
+                    <a href="#">
+                      <span class="visually-hidden">Search link</span>
+                      <svg width='20px' height='20px'>
+                        <use xlink:href='images/sprite.svg#search-pop'></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn" type="button">
+                      <span class="visually-hidden">Cart button</span>
+                      <svg width='22px' height='20px'>
+                        <use xlink:href='images/sprite.svg#cart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn" type="button">
+                      <span class="visually-hidden">Favourites button</span>
+                      <svg width='22px' height='18px'>
+                        <use xlink:href='images/sprite.svg#heart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <h3 class="product-card__name">
+                <span class="visually-hidden">Product name</span>
+                Wooden radio
+              </h3>
+              <p class="product-card__price">
+                <span class="visually-hidden">Product price</span>
+                <span>$</span>29.00
+              </p>
+            </article>
+
+          </li>
+          <li class="mix-nav__item mix category-a category-b category-d">
+
+            <article class="product-card" href="#">
+              <span class="visually-hidden">Second product card</span>
+              <div class="product-card__inner">
+                <img class="product-card__img" src="images/popular/2.jpg" alt="product-card image">
+                <ul class="product-card__items">
+                  <li class="product-card__icon">
+                    <svg width='20px' height='20px'>
+                      <use xlink:href='images/sprite.svg#search-pop'></use>
+                    </svg>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='20px'>
+                        <use xlink:href='images/sprite.svg#cart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='18px'>
+                        <use xlink:href='images/sprite.svg#heart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <h3 class="product-card__name">
+                <span class="visually-hidden">Product name</span>
+                Wooden chair
+              </h3>
+              <p class="product-card__price">
+                <span class="visually-hidden">Product price</span>
+                <span>$</span>29.00
+              </p>
+            </article>
+
+          </li>
+          <li class="mix-nav__item mix category-b category-d">
+
+            <article class="product-card" href="#">
+              <span class="visually-hidden">Third product card</span>
+              <div class="product-card__inner">
+                <img class="product-card__img" src="images/popular/3.jpg" alt="product-card image">
+                <ul class="product-card__items">
+                  <li class="product-card__icon">
+                    <svg class="product-card__icon--search" width='20px' height='20px'>
+                      <use xlink:href='images/sprite.svg#search-pop'></use>
+                    </svg>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='20px'>
+                        <use xlink:href='images/sprite.svg#cart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='18px'>
+                        <use xlink:href='images/sprite.svg#heart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <h3 class="product-card__name">
+                <span class="visually-hidden">Product name</span>
+                White chair
+              </h3>
+              <p class="product-card__price">
+                <span class="visually-hidden">Product price</span>
+                <span>$</span>29.00
+              </p>
+            </article>
+
+          </li>
+          <li class="mix-nav__item mix category-b">
+
+            <article class="product-card" href="#">
+              <span class="visually-hidden">Fourth product card</span>
+              <div class="product-card__inner">
+                <img class="product-card__img" src="images/popular/4.jpg" alt="product-card image">
+                <ul class="product-card__items">
+                  <li class="product-card__icon">
+                    <svg width='20px' height='20px'>
+                      <use xlink:href='images/sprite.svg#search-pop'></use>
+                    </svg>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='20px'>
+                        <use xlink:href='images/sprite.svg#cart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='18px'>
+                        <use xlink:href='images/sprite.svg#heart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <h3 class="product-card__name">
+                <span class="visually-hidden">Product name</span>
+                Retro table
+              </h3>
+              <p class="product-card__price">
+                <span class="visually-hidden">Product price</span>
+                <span>$</span>29.00
+              </p>
+            </article>
+
+          </li>
+          <li class="mix-nav__item mix category-b category-c">
+
+            <article class="product-card" href="#">
+              <span class="visually-hidden">Fifth product card</span>
+              <div class="product-card__inner">
+                <img class="product-card__img" src="images/popular/5.jpg" alt="product-card image">
+                <ul class="product-card__items">
+                  <li class="product-card__icon">
+                    <svg width='20px' height='20px'>
+                      <use xlink:href='images/sprite.svg#search-pop'></use>
+                    </svg>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='20px'>
+                        <use xlink:href='images/sprite.svg#cart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='18px'>
+                        <use xlink:href='images/sprite.svg#heart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <h3 class="product-card__name">
+                <span class="visually-hidden">Product name</span>
+                Wooden radio
+              </h3>
+              <p class="product-card__price">
+                <span class="visually-hidden">Product price</span>
+                <span>$</span>29.00
+              </p>
+            </article>
+
+          </li>
+          <li class="mix-nav__item mix category-a category-b">
+
+            <article class="product-card" href="#">
+              <span class="visually-hidden">Sixth product card</span>
+              <div class="product-card__inner">
+                <img class="product-card__img" src="images/popular/6.jpg" alt="product-card image">
+                <ul class="product-card__items">
+                  <li class="product-card__icon">
+                    <svg width='20px' height='20px'>
+                      <use xlink:href='images/sprite.svg#search-pop'></use>
+                    </svg>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='20px'>
+                        <use xlink:href='images/sprite.svg#cart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='18px'>
+                        <use xlink:href='images/sprite.svg#heart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <h3 class="product-card__name">
+                <span class="visually-hidden">Product name</span>
+                Wooden chair
+              </h3>
+              <p class="product-card__price">
+                <span class="visually-hidden">Product price</span>
+                <span>$</span>29.00
+              </p>
+            </article>
+
+          </li>
+          <li class="mix-nav__item mix category-a">
+
+            <article class="product-card" href="#">
+              <span class="visually-hidden">Seventh product card</span>
+              <div class="product-card__inner">
+                <img class="product-card__img" src="images/popular/7.jpg" alt="product-card image">
+                <ul class="product-card__items">
+                  <li class="product-card__icon">
+                    <svg width='20px' height='20px'>
+                      <use xlink:href='images/sprite.svg#search-pop'></use>
+                    </svg>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='20px'>
+                        <use xlink:href='images/sprite.svg#cart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='18px'>
+                        <use xlink:href='images/sprite.svg#heart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <h3 class="product-card__name">
+                <span class="visually-hidden">Product name</span>
+                White chair
+              </h3>
+              <p class="product-card__price">
+                <span class="visually-hidden">Product price</span>
+                <span>$</span>29.00
+              </p>
+            </article>
+
+          </li>
+          <li class="mix-nav__item mix category-c category-d">
+
+            <article class="product-card" href="#">
+              <span class="visually-hidden">Eighth product card</span>
+              <div class="product-card__inner">
+                <img class="product-card__img" src="images/popular/8.jpg" alt="product-card image">
+                <ul class="product-card__items">
+                  <li class="product-card__icon">
+                    <svg width='20px' height='20px'>
+                      <use xlink:href='images/sprite.svg#search-pop'></use>
+                    </svg>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='20px'>
+                        <use xlink:href='images/sprite.svg#cart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='18px'>
+                        <use xlink:href='images/sprite.svg#heart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <h3 class="product-card__name">
+                <span class="visually-hidden">Product name</span>
+                Retro table
+              </h3>
+              <p class="product-card__price">
+                <span class="visually-hidden">Product price</span>
+                <span>$</span>29.00
+              </p>
+            </article>
+
+          </li>
+        </ul>
+      </div>
+
+      <div class="wrapper">
+        <ul class="accessories">
+
+          <li class="accessories__item">
+            <img class="accessories__img" src="images/popular/lamp-cat.png" alt="lamp-cat">
+            <div class="accessories__content">
+              <h3 class="accessories__title">Mirum Notare Tellus</h3>
+              <div class="accessories__text">
+                <p>LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight</p>
+              </div>
+              <a class="link-btn link-btn__accessories" href="#">
+                <span class="visually-hidden">View More accessories link</span>
+                View More
+                <svg class="user-nav__img" width='22px' height='9px'>
+                  <use xlink:href='images/sprite.svg#arrow-right'></use>
+                </svg>
+              </a>
+            </div>
+
+          </li>
+
+          <li class="accessories__item">
+            <img class="accessories__img" src="images/popular/lamp-leg.png" alt="lamp-cat">
+            <div class="accessories__content">
+              <h3 class="accessories__title">Malesuada Tempor Euismod</h3>
+              <div class="accessories__text">
+                <p>50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight</p>
+              </div>
+              <a class="link-btn link-btn__accessories" href="#">
+                <span class="visually-hidden">View More accessories link</span>
+                View More
+                <svg class="user-nav__img" width='22px' height='9px'>
+                  <use xlink:href='images/sprite.svg#arrow-right'></use>
+                </svg>
+              </a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="new-design">
+      <div class="container">
+<!-- Иногда трясется при переключении, почему ? -->
+        <h2 class="title new-design__title">New Design</h2>
+        <ul class="mix-nav">
+          <li class="btn mix-nav__button">
+            <span class="visually-hidden">All button</span>
+            <button class="btn mix-nav__btn" href="#" type="button" data-filter="all">All</button>
+          </li>
+          <li class="mix-nav__button">
+            <span class="visually-hidden">Furnitures button</span>
+            <button class="btn mix-nav__btn" href="#" type="button" data-filter=".category-a">Furnitures</button>
+          </li>
+          <li class="mix-nav__button">
+            <span class="visually-hidden">Chairs button</span>
+            <button class="btn mix-nav__btn" href="#" type="button" data-filter=".category-b">Chairs</button>
+          </li>
+          <li class="mix-nav__button">
+            <span class="visually-hidden">Lighting button</span>
+            <button class="btn mix-nav__btn" href="#" type="button" data-filter=".category-c">Lighting</button>
+          </li>
+          <li class="mix-nav__button">
+            <span class="visually-hidden">Decor button</span>
+            <button class="btn mix-nav__btn" href="#" type="button" data-filter=".category-d">Decor</button>
+          </li>
+        </ul>
+
+        <ul class="mix-nav__content mix-nav__content--new">
+          <li class="mix-nav__item mix-nav__item--new mix category-a category-c category-d">
+
+            <article class="product-card product-card--new" href="#">
+              <span class="visually-hidden">First new designed product card</span>
+              <div class="product-card__inner product-card__inner--new">
+                <div class="product-card__desc">
+                  <h3 class="product-card__name product-card__name--new">
+                    <span class="visually-hidden">Product name</span>
+                    Beat Flat Pendant Black
+                  </h3>
+                  <p class="product-card__style">
+                    <span class="visually-hidden">Product style</span>
+                    <span>Classic</span>
+                  </p>
+                </div>
+                <img class="product-card__img product-card__img--new" src="images/new-design/1.png"
+                  alt="new-product-card image">
+                <ul class="product-card__items product-card__items--new">
+                  <li class="product-card__icon">
+                    <svg width='20px' height='20px'>
+                      <use xlink:href='images/sprite.svg#search-pop'></use>
+                    </svg>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='20px'>
+                        <use xlink:href='images/sprite.svg#cart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='18px'>
+                        <use xlink:href='images/sprite.svg#heart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+
+              </div>
+
+            </article>
+
+          </li>
+          <li class="mix-nav__item mix-nav__item--new mix category-a category-c category-d">
+
+            <article class="product-card product-card--new" href="#">
+              <span class="visually-hidden">Second new designed product card</span>
+              <div class="product-card__inner product-card__inner--new">
+                <div class="product-card__desc">
+                  <h3 class="product-card__name product-card__name--new">
+                    <span class="visually-hidden">Product name</span>
+                    Lampe Sur Pieds Bamboo
+                  </h3>
+                  <p class="product-card__style">
+                    <span class="visually-hidden">Product style</span>
+                    <span>Classic</span>
+                  </p>
+                </div>
+                <img class="product-card__img product-card__img--new" src="images/new-design/2.png"
+                  alt="new-product-card image">
+                <ul class="product-card__items product-card__items--new">
+                  <li class="product-card__icon">
+                    <svg width='20px' height='20px'>
+                      <use xlink:href='images/sprite.svg#search-pop'></use>
+                    </svg>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='20px'>
+                        <use xlink:href='images/sprite.svg#cart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='18px'>
+                        <use xlink:href='images/sprite.svg#heart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+          </li>
+          <li class="mix-nav__item mix-nav__item--new mix category-a category-b">
+
+            <article class="product-card product-card--new" href="#">
+              <span class="visually-hidden">Third new designed product card</span>
+              <div class="product-card__inner product-card__inner--new">
+                <div class="product-card__desc">
+                  <h3 class="product-card__name product-card__name--new">
+                    <span class="visually-hidden">Product name</span>
+                    Rattan Rocking Chair
+                  </h3>
+                  <p class="product-card__style">
+                    <span class="visually-hidden">Product style</span>
+                    <span>Classic</span>
+                  </p>
+                </div>
+                <img class="product-card__img product-card__img--new" src="images/new-design/3.png"
+                  alt="new-product-card image">
+                <ul class="product-card__items product-card__items--new">
+                  <li class="product-card__icon">
+                    <svg width='20px' height='20px'>
+                      <use xlink:href='images/sprite.svg#search-pop'></use>
+                    </svg>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='20px'>
+                        <use xlink:href='images/sprite.svg#cart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='18px'>
+                        <use xlink:href='images/sprite.svg#heart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+          </li>
+          <li class="mix-nav__item mix-nav__item--new mix category-a category-c">
+
+            <article class="product-card product-card--new" href="#">
+              <span class="visually-hidden">Fourth new designed product card</span>
+              <div class="product-card__inner product-card__inner--new">
+                <div class="product-card__desc">
+                  <h3 class="product-card__name product-card__name--new">
+                    <span class="visually-hidden">Product name</span>
+                    Rattan Rocking Chair
+                  </h3>
+                  <p class="product-card__style">
+                    <span class="visually-hidden">Product style</span>
+                    <span>Classic</span>
+                  </p>
+                </div>
+                <img class="product-card__img product-card__img--new" src="images/new-design/4.png"
+                  alt="new-product-card image">
+                <ul class="product-card__items product-card__items--new">
+                  <li class="product-card__icon">
+                    <svg width='20px' height='20px'>
+                      <use xlink:href='images/sprite.svg#search-pop'></use>
+                    </svg>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='20px'>
+                        <use xlink:href='images/sprite.svg#cart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='18px'>
+                        <use xlink:href='images/sprite.svg#heart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+          </li>
+          <li class="mix-nav__item mix-nav__item--new mix category-a category-b">
+
+            <article class="product-card product-card--new" href="#">
+              <span class="visually-hidden">Fifth new designed product card</span>
+              <div class="product-card__inner product-card__inner--new">
+                <div class="product-card__desc">
+                  <h3 class="product-card__name product-card__name--new">
+                    <span class="visually-hidden">Product name</span>
+                    Rattan Rocking Chair
+                  </h3>
+                  <p class="product-card__style">
+                    <span class="visually-hidden">Product style</span>
+                    <span>Classic</span>
+                  </p>
+                </div>
+                <img class="product-card__img product-card__img--new" src="images/new-design/5.png"
+                  alt="new-product-card image">
+                <ul class="product-card__items product-card__items--new">
+                  <li class="product-card__icon">
+                    <svg width='20px' height='20px'>
+                      <use xlink:href='images/sprite.svg#search-pop'></use>
+                    </svg>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='20px'>
+                        <use xlink:href='images/sprite.svg#cart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='18px'>
+                        <use xlink:href='images/sprite.svg#heart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+          </li>
+          <li class="mix-nav__item mix-nav__item--new mix category-a category-c category-d">
+
+            <article class="product-card product-card--new" href="#">
+              <span class="visually-hidden">Sixth new designed product card</span>
+              <div class="product-card__inner product-card__inner--new">
+                <div class="product-card__desc">
+                  <h3 class="product-card__name product-card__name--new">
+                    <span class="visually-hidden">Product name</span>
+                    Lampe Sur Pieds Bamboo
+                  </h3>
+                  <p class="product-card__style">
+                    <span class="visually-hidden">Product style</span>
+                    <span>Classic</span>
+                  </p>
+                </div>
+                <img class="product-card__img product-card__img--new" src="images/new-design/6.png"
+                  alt="new-product-card image">
+                <ul class="product-card__items product-card__items--new">
+                  <li class="product-card__icon">
+                    <svg width='20px' height='20px'>
+                      <use xlink:href='images/sprite.svg#search-pop'></use>
+                    </svg>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='20px'>
+                        <use xlink:href='images/sprite.svg#cart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="product-card__icon">
+                    <button class="btn product-card__btn" type="button">
+                      <svg width='22px' height='18px'>
+                        <use xlink:href='images/sprite.svg#heart-pop'></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- не думаю что это секция, без секции можно делать ? -->
+    <a data-fancybox class="video" href="https://www.youtube.com/watch?v=Y02Y4fY8JY4" data-width="600" data-height="300"
+      style="background-image: url('images/video-bg.jpg')">
+      <!-- без оборачивания в див не могу задать фон svg, к вопросу об иконках в вопроснике -->
+      <span class="visually-hidden">Video link</span>
+      <div class="video__img">
+        <svg width='22px' height='25px'>
+          <use xlink:href='images/sprite.svg#video-btn'></use>
+        </svg>
+      </div>
+    </a>
+
+    <section class="news">
+      <div class="container">
+        <div class="news__heading">
+          <h2 class="title news__title">
+            Our Insights & Articles
+          </h2>
+          <a class="news__link" href="#">
+            <span class="visually-hidden">View All news link</span>
+            View All
+            <svg width='7px' height='12px'>
+              <use xlink:href='images/sprite.svg#direct-right'></use>
+            </svg>
+          </a>
+        </div>
+        <ul class="news__list">
+
+          <li class="news__item">
+            <a class="news__img" href="#">
+              <span class="visually-hidden">First News link</span>
+              <img src="images/news/1.jpg" alt="news image 1">
+              <span>News</span>
+            </a>
+            <div class="news__desc">
+              <div class="news__text">
+                <p>Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                </p>
+              </div>
+              <div class="news__info">
+                <span class="news__calendar">
+                  <svg width='13px' height='13px'>
+                    <use xlink:href='images/sprite.svg#calendar'></use>
+                  </svg>
+                  28 january, 2020
+                </span>
+                <a class="news__author" href="#">
+                  <span class="visually-hidden">Author of first news link</span>
+                  <svg width='13px' height='13px'>
+                    <use xlink:href='images/sprite.svg#user'></use>
+                  </svg>
+                  By admin
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="news__item">
+            <a class="news__img" href="#">
+              <span class="visually-hidden">Second News link</span>
+              <img src="images/news/2.jpg" alt="news image 2">
+              <span>News</span>
+            </a>
+            <div class="news__desc">
+              <div class="news__text">
+                <p>Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                </p>
+              </div>
+              <div class="news__info">
+                <span class="news__calendar">
+                  <svg width='13px' height='13px'>
+                    <use xlink:href='images/sprite.svg#calendar'></use>
+                  </svg>
+                  28 january, 2020
+                </span>
+                <a class="news__author" href="#">
+                  <span class="visually-hidden">Author of second news link</span>
+                  <svg width='13px' height='13px'>
+                    <use xlink:href='images/sprite.svg#user'></use>
+                  </svg>
+                  By admin
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="news__item">
+            <a class="news__img" href="#">
+              <span class="visually-hidden">Third News link</span>
+              <img src="images/news/3.jpg" alt="news image 3">
+              <span>News</span>
+            </a>
+            <div class="news__desc">
+              <div class="news__text">
+                <p>Rncididunt ut labore et dolore magna aliqua. Ut enim </p>
+              </div>
+              <div class="news__info">
+                <span class="news__calendar">
+                  <svg width='13px' height='13px'>
+                    <use xlink:href='images/sprite.svg#calendar'></use>
+                  </svg>
+                  28 january, 2020
+                </span>
+                <a class="news__author" href="#">
+                  <span class="visually-hidden">Author of third news link</span>
+                  <svg width='13px' height='13px'>
+                    <use xlink:href='images/sprite.svg#user'></use>
+                  </svg>
+                  By admin
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+      <!-- вставил чере img, потому что думаю что должна быть возможность смены партнеров через html, но есть легкое сомнение -->
+      <div class="inner">
+        <div class="container">
+          <ul class="partners">
+            <li class="partners__item">
+              <span class="visually-hidden">Stephanie Peterson</span>
+              <img class="" src="images/partners/peterson.png" alt="Stephanie Peterson">
+            </li>
+            <li class="partners__item">
+              <span class="visually-hidden">KMN Consulting</span>
+              <img src="images/partners/kmn.png" alt="KMN Consulting">
+            </li>
+            <li class="partners__item">
+              <span class="visually-hidden">Chainforce</span>
+              <img src="images/partners/chainforce.png" alt="Chainforce">
+            </li>
+            <li class="partners__item">
+              <span class="visually-hidden">Nextgen</span>
+              <img src="images/partners/nextgen.png" alt="NEXTG3N">
+            </li>
+            <li class="partners__item">
+              <span class="visually-hidden">Vintage</span>
+              <img src="images/partners/vintage.png" alt="VINTAGE">
+            </li>
+          </ul>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
     <div class="container">
 
-      <div class="footer-top">
-        <div class="footer-top__item footer-top__contact">
-          <a class="logo footer-top__logo" href="#">
-            <img src="images/icons/logo.png" alt="logo">
+      <ul class="footer__items">
+        <li class="footer__item">
+          <a class="logo footer__logo" href="#">
+            <img src="images/svg/logo.svg" alt="logo">
           </a>
-          <div class="footer-top__adress">
-            ADDRESS: 4772 Wines Lane
-            Houston, TX 77032
-          </div>
-          <a class="footer-top__phone" href="tel:+8323475843">
-            TELEPHONE: +832-347-5843
-          </a>
-          <a class="footer-top__email" href="mailto:contact@Glee.com">
-            EMAIL: contact@Glee.com
-          </a>
-        </div>
+          <address class="address">
+            <div class="address__item">
+              <span class="visually-hidden">Address</span>
+              ADDRESS: 4772 Wines Lane
+              Houston, TX 77032
+            </div>
+            <a class="address__item" href="tel:+8323475843">
+              <span class="visually-hidden">Telephone number</span>
+              TELEPHONE: +832-347-5843
+            </a>
+            <a class="address__item" href="mailto:contact@Glee.com">
+              <span class="visually-hidden">Email</span>
+              EMAIL: contact@Glee.com
+            </a>
+          </address>
+        </li>
 
-        <div class="footer-top__item footer-top__nav">
-          <div class="footer-top__title">
+        <li class="footer__item">
+          <h3 class="footer__title">
             Services
-          </div>
-          <ul class="footer-top__list">
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">About us</a>
+          </h3>
+          <ul class="footer__list">
+            <li class="footer__link">
+              <span class="visually-hidden">About us link</span>
+              <a href="#">About us</a>
             </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Return Policy</a>
+            <li class="footer__link">
+              <span class="visually-hidden">Return Policy</span>
+              <a href="#">Return Policy</a>
             </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Our Blog</a>
+            <li class="footer__link">
+              <span class="visually-hidden">Our Blog link</span>
+              <a href="#">Our Blog</a>
             </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Contact Us</a>
+            <li class="footer__link">
+              <span class="visually-hidden">Contact Us link</span>
+              <a href="#">Contact Us</a>
             </li>
-            <li class="footer-top__item">
-              <a href="#" class="footer-top__link">Terms & Condition</a>
+            <li class="footer__link">
+              <span class="visually-hidden">Terms & Condition link</span>
+              <a href="#">Terms & Condition</a>
             </li>
           </ul>
-        </div>
-        <div class="footer-top__item footer-top__nav">
-          <div class="footer-top__title">
+        </li>
+
+        <li class="footer__item">
+          <h3 class="footer__title">
             Account
-          </div>
-          <ul class="footer-top__list">
-            <li class="footer-top__item">
-              <a href="#" class="footer-top__link">Your Account</a>
+          </h3>
+          <ul class="footer__list">
+            <li class="footer__link">
+              <span class="visually-hidden">Your Account link</span>
+              <a href="#">Your Account</a>
             </li>
-            <li class="footer-top__item">
-              <a href="#" class="footer-top__link">Checkout</a>
+            <li class="footer__link">
+              <span class="visually-hidden">Checkout link</span>
+              <a href="#">Checkout</a>
             </li>
-            <li class="footer-top__item">
-              <a href="#" class="footer-top__link">Login</a>
+            <li class="footer__link">
+              <span class="visually-hidden">Login link</span>
+              <a href="#">Login</a>
             </li>
-            <li class="footer-top__item">
-              <a href="#" class="footer-top__link">Register</a>
+            <li class="footer__link">
+              <span class="visually-hidden">Register link</span>
+              <a href="#">Register</a>
             </li>
           </ul>
-        </div>
-        <div class="footer-top__item footer-top__form">
-          <div class="footer-top__title">
+        </li>
+
+        <div class="footer__item">
+          <h3 class="footer__title">
             Newsletter
-          </div>
-          <p class="footer-top__text">Subscribe by our newsletter and get
+          </h3>
+          <p class="footer__text">Subscribe by our newsletter and get
             update protidin.</p>
-          <form class="footer-top__form" action="#">
-            <input class="footer-top__form-input" type="email" placeholder="Email address" required>
-            <button class="footer-top__form-btn" type="submit">Subscribe</button>
+          <form class="footer__form" action="#">
+            <label for="email">
+              <span class="visually-hidden">Email form</span>
+              email
+            </label>
+            <input class="footer__form-input" type="email" placeholder="Email address" required>
+            <button class="btn footer__form-btn" type="submit">
+              <span class="visually-hidden">Subscribe button</span>
+              Subscribe
+            </button>
           </form>
         </div>
-      </div>
+      </ul>
 
-      <div class="footer-bottom">
-        <p class="footer-bottom__copy">
+      <div class="footer-nav">
+        <p class="footer-nav__copy">
           ©2020 CopyRight Example. All rights reserved.
         </p>
-        <ul class="footer-bottom__items">
-          <li class="footer-bottom__item">
-            <a class="footer-bottom__link" href="#">Home</a>
+
+        <ul class="footer-nav__items">
+          <li class="footer-nav__item">
+            <span class="visually-hidden">Home link</span>
+            <a href="#">Home</a>
           </li>
-          <li class="footer-bottom__item">
-            <a class="footer-bottom__link" href="#">About</a>
+          <li class="footer-nav__item">
+            <span class="visually-hidden">About link</span>
+            <a href="#">About</a>
           </li>
-          <li class="footer-bottom__item">
-            <a class="footer-bottom__link" href="#">Blog</a>
+          <li class="footer-nav__item">
+            <span class="visually-hidden">Blog link</span>
+            <a href="#">Blog</a>
           </li>
-          <li class="footer-bottom__item">
-            <a class="footer-bottom__link" href="#">Contact</a>
+          <li class="footer-nav__item">
+            <span class="visually-hidden">Contact link</span>
+            <a href="#">Contact</a>
           </li>
         </ul>
+
       </div>
     </div>
   </footer>
+
   <script src="js/mixitup.min.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 
