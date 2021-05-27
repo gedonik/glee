@@ -1,26 +1,35 @@
-@import 'vars';
 @import 'fonts';
+@import 'vars';
 @import 'reset';
 @import 'libs';
 @import 'global';
 
 .header {
   padding: 45px 0 45px;
-  @extend %rubik-700;
-  background-color: #fff;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
 
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
+  &__logo {
+    max-width: 145px;
+  }
 }
 
-// в макете очень много цветов, те которые редко используются в переменные не пихал
+// сначала задал логотипу margin-right, но это бред, при адаптиве ломается, пришлось на абсолюте
 .menu {
   &__list {
     display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 15px;
+    line-height: 0.8;
+    color: $blue-850;
   }
 
   &__item:not(:last-child) {
@@ -29,171 +38,172 @@
 
   &__link {
     padding-bottom: 5px;
-  }
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s;
 
-  &__link:hover {
-    border-bottom: 2px solid $default;
-    transition: color 0.5s;
+    &:hover {
+      border-bottom-color: $blue-850;
+    }
   }
 }
 
 .user-nav {
   display: flex;
-  align-items: center;
 
-  &__search {
-    position: relative;
-    margin-right: 40px;
-    z-index: 1;
+  &__search,
+  &__burger {
+    padding: 14px 16px 8px;
+    border-radius: 50%;
+    background-color: $grey-600;
+    transition: background-color 0.3s;
+
+    &:active {
+      background-color: $orange-600;
+    }
   }
 
-  &__search::after,
-  &__burger::after {
-    content: '';
-    position: absolute;
-    top: -15px;
-    left: -15px;
-    width: 50px;
-    height: 50px;
-    background-color: #edf1f4;
-    border-radius: 50%;
-    z-index: -1;
+  &__search {
+    margin-right: 20px;
   }
 
   &__burger {
-    position: relative;
-    margin-right: 15px;
-    z-index: 1;
-  }
-
-  &__burger::after {
-    background-color: #a3bbc8;
+    background-color: $blue-800;
   }
 
   &__inner {
     display: flex;
-    margin-right: 35px;
-    background-color: $background;
+    margin-right: 17px;
+    background-color: $orange-600;
     border-radius: 50px;
   }
 
   &__link {
     position: relative;
+
+    &--heart {
+      padding: 16px 30px 8px 40px;
+    }
+
+    &--cart {
+      padding: 16px 40px 8px 30px;
+    }
+
+    &--heart::after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 32px;
+      top: 10px;
+      right: 0;
+      background-color: $orange-500;
+      transition: color 0.3s;
+      opacity: 0.8;
+    }
+
+    &:hover {
+      color: red;
+    }
   }
 
-  &__link--heart::after {
-    content: '';
+  &__num {
     position: absolute;
-    top: 11px;
-    left: 88px;
-    width: 1px;
-    height: 32px;
-    background-color: #fff;
-    opacity: 0.4;
-  }
-
-  // весь user-nav кривой что ппц
-  &__heart {
-    position: relative;
-    padding: 22px 30px 13px 40px;
-  }
-
-  &__cart {
-    padding: 22px 42px 13px 27px;
-  }
-
-  &__num--heart,
-  &__num--cart {
-    position: absolute;
-    top: 15px;
-    right: 23px;
-    width: 15px;
-    height: 15px;
+    top: 10px;
+    right: 20px;
+    width: 17px;
+    height: 18px;
     font-size: 10px;
     text-align: center;
     background-color: #fff;
     border-radius: 50%;
-  }
 
-  &__num--cart {
-    right: 35px;
+    &--cart {
+      right: 32px;
+    }
   }
 }
 
+// с высотой не нравится, но не знаю как по-другому сделать =(
 .top-slider {
-  background-color: #fff;
-
   &__inner {
-    position: relative;
-    margin-bottom: 42px;
+    height: 820px;
   }
 
+  &__item {
+    position: relative;
+    background-color: $orange-600;
+    height: 820px;
+  }
+
+  // контент не по центру, поэтому сделал так, другого способа не знаю
   &__content {
     position: absolute;
     max-width: 470px;
     width: 100%;
-    margin-top: 210px;
-    margin-left: 300px;
+    left: 17%;
+    top: 47%;
+    transform: translateY(-50%);
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
   }
 
   &__title {
     margin-bottom: 20px;
-    @extend %rubik-700;
+    font-weight: 700;
     font-size: 72px;
     line-height: 1.1;
     text-transform: uppercase;
-    color: #243f4d;
+    color: $blue-900;
   }
 
   &__text {
     max-width: 350px;
-    margin-bottom: 38px;
-    @extend %rubik-500;
+    margin-bottom: 35px;
+    font-weight: 500;
     font-size: 18px;
     line-height: 1.5;
   }
 
-  &__btn {
-    position: relative;
-    padding: 20px 100px 20px 30px;
-    border: none;
-    outline: none;
-    color: #fff;
-    background-color: $btn;
-    cursor: pointer;
-  }
-
-  &__btn::after {
-    content: '';
+  &__img {
     position: absolute;
-    background-image: url(../images/icons/arrow-right.svg);
-    top: 25px;
-    right: 22px;
-    width: 22px;
-    height: 9px;
-  }
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 640px;
+    z-index: 1;
 
-  &__btn:hover {
-    color: $hov;
+    // при адаптиве будет грустноиз-за размеров
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url(../images/slider/circle.png);
+      width: 635px;
+      height: 635px;
+      left: 145px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: -1;
+    }
   }
 
   .slick-dots {
     display: flex;
-    justify-content: center;
-    margin-top: -75px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
 
     li {
-      padding: 0 5px;
-
       button {
         position: relative;
         width: 28px;
         height: 28px;
         font-size: 11px;
         border-radius: 50%;
-        border: none;
+        border: transparent;
         color: #243f4d;
         background-color: rgba(255, 255, 255, 0.3);
+        transition: background-color 0.3s;
         cursor: pointer;
 
         &:hover {
@@ -207,252 +217,530 @@
         }
       }
     }
-  }
 
-  .top-advantages {
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(252, 215, 182, 0.3);
-
-    &__item {
-      position: relative;
-      width: calc(100%/3);
-      padding: 45px 145px 35px 220px;
+    li:not(:last-child) {
+      margin-right: 10px;
     }
+  }
+}
 
-    &__item:not(:last-child) {
+.top-advantages {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(252, 215, 182, 0.3);
+
+  &__item {
+    position: relative;
+    width: calc(100%/3);
+    padding: 35px 145px 40px 220px;
+
+    &:not(:last-child) {
       border-right: 1px solid #e8e4df;
     }
 
-    &__item::before {
+    &::before {
       content: '';
       position: absolute;
       top: 50px;
       left: 145px;
     }
 
-    &__item--clock::before {
+    &--clock::before {
       width: 53px;
       height: 54px;
       background-image: url(../images/icons/clock.png);
     }
 
-    &__item--delivery::before {
+    &--delivery::before {
       width: 55px;
       height: 37px;
       background-image: url(../images/icons/delivery.png);
     }
 
-    &__item--payment::before {
+    &--payment::before {
       width: 54px;
       height: 53px;
       background-image: url(../images/icons/payment.png);
     }
+  }
 
-    &__title {
-
-      @extend %dmsans-700;
-      font-size: 18px;
-    }
-
-    &__text {
-      line-height: 2;
-    }
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
   }
 }
 
-.popular__wrapper {
-  max-width: 1770px;
-  padding: 70px 0 145px;
-  background-color: #f9f9f9;
+.mix-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
 
-  .popular {
-    &__title {
-      margin-bottom: 20px;
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: -30px;
+  }
+
+  &__btn {
+    font-weight: 700;
+    font-size: 16px;
+    color: $grey-800;
+
+    &:hover,
+    &.mixitup-control-active {
+      color: $black-950;
     }
+  }
 
-    &__filter-btn {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 80px;
-      @extend %dmsans-700;
-      font-size: 16px;
-      color: #8b8b8b;
+  &__button:not(:last-child) {
+    margin-right: 18px;
+  }
+
+  &__item {
+    position: relative;
+    margin: 0 30px 40px 0;
+    max-width: 270px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+
+    &--new {
+      max-width: 370px;
+      background-color: $grey-550;
+      box-shadow: none;
+      border-radius: 0;
     }
+  }
 
-    &__btn:hover {
-      color: #191919;
+}
+
+.popular {
+  position: relative;
+  padding: 55px 0 80px;
+
+  &__title {
+    margin-bottom: 10px;
+  }
+}
+
+.product-card {
+
+  &__inner {
+    margin-bottom: 50px;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    &--new {
+      max-width: 335px;
+      width: 100%;
+      height: 195px;
     }
+  }
 
-    &__btn:not(:last-child) {
-      margin-right: 30px;
-    }
+  &__desc {
+    display: block;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    text-align: left;
+    max-width: 175px;
+    z-index: 1;
+  }
 
-    &__content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-right: -40px;
-      // тоже самое, только когда меньше 4 картинок, не могу по центру поставить
-      // display: grid;
-      // grid-template-columns: repeat(4, 2fr);
-      // grid-gap: 30px;
-    }
+  &__img {
+    max-width: 250px;
 
-    &__item {
-      position: relative;
-      margin: 0 40px 40px 0;
-      max-width: 270px;
-      height: 380px;
-      background-color: #fff;
-      border-radius: 5%;
-    }
-
-    &__img {
-      display: block;
-      margin: 0 auto 20px;
-      padding-top: 5px;
-    }
-
-    &__items {
+    &--new {
       position: absolute;
-      display: flex;
-      justify-content: center;
-      left: 0;
+      max-width: 375px;
       right: 0;
-      bottom: 155px;
-      text-align: center;
-      z-index: 1;
-      opacity: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__items {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    bottom: 155px;
+    text-align: center;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+
+    &--new {
+      bottom: 30px;
+    }
+  }
+
+  &:hover {
+    .product-card__items {
+      opacity: 1;
+    }
+  }
+
+  &__icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-color: $blue-800;
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    svg {
+      transform: translateY(50%);
+      fill: $blue-800;
     }
 
-    &__link:hover {
-      .popular__items {
-        opacity: 1;
-      }
-    }
+    &:hover {
+      background-color: $blue-800;
 
-    &__icon {
-      width: 45px;
-      height: 45px;
-      background-color: #fff;
-      border-radius: 50%;
-    }
-
-    &__icon:not(:last-child) {
-      margin-right: 40px;
-    }
-
-    &__icon:hover {
-      fill: #fff;
-      background-color: #a3bbc8;
-
-      svg path {
+      svg {
         fill: #fff;
       }
     }
+  }
 
-    &__name,
-    &__price {
-      text-align: center;
-      font-size: 16px;
-      @extend %dmsans-700;
-      color: #243f4d;
-    }
+  &__icon:not(:last-child) {
+    margin-right: 17px;
+  }
 
-    &__name {
-      margin-bottom: 10px;
-    }
+  &__name,
+  &__price {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: $blue-900;
 
-    &__price {
-      color: $btn;
+    &--new {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.3;
+      text-align: left;
     }
+  }
+
+  &__price {
+    padding-bottom: 30px;
+    color: $blue-800;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.footer {
-  @extend %rubik-500;
-  background-color: #fff;
-}
-
-.footer-top {
+.accessories {
   display: flex;
-  padding: 80px 0 65px;
-  font-size: 14px;
-  line-height: 1.5;
-  border-bottom: 1px solid #dae4e9;
-  color: #7b7b7b;
+  justify-content: space-between;
+  padding-top: 145px;
 
-  &__logo img {
-    margin-bottom: 30px;
+  &__item {
+    position: relative;
+    max-width: 870px;
+    width: 100%;
+    height: 390px;
+    background-color: $orange-470;
   }
 
-  &__phone:hover,
-  &__email:hover,
-  &__link:hover,
-  &__form-btn:hover {
-    color: $hov;
-    transition: color 0.5s;
+  &__img {
+    position: absolute;
+    width: 230px;
+    top: -25%;
+    left: 16%;
   }
 
-  &__contact {
-    width: 200px;
-    margin-right: 100px;
-  }
-
-  &__adress,
-  &__phone {
-    display: block;
-    margin-bottom: 15px;
-  }
-
-  &__nav {
-    width: 170px;
-    margin-right: 130px;
-    margin-top: 18px;
-  }
-
-  &__form {
-    max-width: 270px;
-    margin-top: 18px;
+  // мне кажется я фигню делаю, расскажи как правильно позиционировать, если отступы не по центру
+  &__content {
+    position: absolute;
+    max-width: 340px;
+    width: 100%;
+    right: 16%;
+    top: 48%;
+    transform: translateY(-50%);
   }
 
   &__title {
     margin-bottom: 20px;
+    font-size: 26px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  &__text {
+    margin-bottom: 25px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
     font-size: 16px;
-    @extend %dmsans-700;
+  }
+
+}
+
+.link-btn__accessories {
+  padding: 15px 85px 15px 20px;
+  background-color: transparent;
+  color: $blue-850;
+  border: 1px solid $grey-700;
+  border-radius: 5px;
+
+  svg {
+    fill: $blue-850;
+  }
+
+  &:hover {
+    color: #fff;
+
+    svg {
+      fill: #fff;
+    }
+  }
+}
+
+.new-design {
+  margin-bottom: 80px;
+}
+
+.video {
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+
+  &__img {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background-color: $blue-800;
+    border-radius: 50%;
+    animation: radial-pulse 1.5s infinite;
+    transition: background-color 0.3s;
+
+    svg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: 50%;
+      transform: translateY(-50%);
+      fill: #fff;
+    }
+
+    @keyframes radial-pulse {
+      0% {
+        box-shadow: 0 0 0 0px rgba(163, 187, 200, 0.8);
+      }
+
+      // Не понимаю как задать на ховер изменение цвета пульсации, если нельзя тогда просто цвет кнопки треугольной поменяю или просто оставлю как есть
+      // box-shadow: 0 0 0 0px rgba(252, 215, 182, 0.8);
+      100% {
+        box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+      }
+    }
+
+    // Хочу при наведении все в оранжевый сделать
+    // &:hover {
+    //   background-color: $orange-600;
+    // }
+  }
+}
+
+.news {
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    position: relative;
+    font-weight: 700;
+    font-size: 16px;
+    color: $black-900;
+
+    svg {
+      margin-left: 15px;
+      fill: $black-900;
+    }
+
+    &:hover {
+      color: $blue-800;
+
+      svg {
+        fill: $blue-800;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 370px;
+    width: 100%;
+  }
+
+  &__img {
+    display: block;
+    position: relative;
+
+    span {
+      position: absolute;
+      left: 8%;
+      bottom: -5%;
+      padding: 0 30px;
+      font-weight: 700;
+      color: #fff;
+      background-color: $blue-800;
+      border-radius: 50px;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $black-900;
+      }
+    }
+  }
+
+  //  без высоты ровно не встают =(
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    padding: 35px 25px 15px 35px;
+    max-height: 170px;
+    height: 100%;
+    background-color: #fff;
+  }
+
+  &__text {
+    display: block;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  // не знаю можно ли из спрайта сюда на background-image поставить, поэтому пока так
+  &__info {
+    margin-top: auto;
+    padding-top: 10px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 2.5;
+    border-top: 1px solid $grey-700;
+    text-transform: uppercase;
+
+    svg {
+      margin-right: 5px;
+      fill: $black-900;
+      transition: fill 0.3s;
+    }
+  }
+
+  &__calendar {
+    margin-right: 20px;
+  }
+
+  &__author {
+    transition: color 0.3s;
+
+    &:hover {
+      color: $blue-800;
+
+      svg {
+        fill: $blue-800;
+      }
+    }
+  }
+
+  // не сооброжу как сделать отрицательно ровно не в пикселях, при адаптиве будет плохо =( 
+  .inner {
+    padding-top: 260px;
+    padding-bottom: 90px;
+    background-color: $orange-450;
+    margin-top: -155px;
+  }
+
+  // не понимаю почему при запуске скрипта в main.js он крашит эти стили
+  .partners {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__item {
+      max-width: 155px;
+    }
+  }
+}
+
+.footer {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+
+  // тут паддингу приоритета не хватало, убрал из резета паддинг 0 по классу у ul
+  &__items {
+    display: flex;
+    padding: 80px 0;
+    font-size: 14px;
+    line-height: 1.7;
+    border-bottom: 1px solid $blue-750;
+    color: $grey-850;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:first-child) {
+      transform: translateY(10%);
+    }
+
+    &:not(:last-child) {
+      max-width: 200px;
+      width: 100%;
+      margin-right: 100px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 700;
     line-height: 1.3;
     text-transform: uppercase;
-    color: #1f2044;
+    color: $blue-950;
   }
 
   &__link {
     display: block;
     margin-bottom: 10px;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $blue-950;
+    }
   }
 
   &__text {
     margin-bottom: 38px;
+  }
+
+  &__logo img {
+    margin-bottom: 25px;
+  }
+
+  &__form {
+    max-width: 270px;
   }
 
   &__form-input {
@@ -461,65 +749,80 @@
     padding: 13px 15px 11px 15px;
     font-size: 12px;
     line-height: 1.2;
-    color: #234969;
-    background-color: #fef7f0;
-    border: none;
-    outline: none;
+    color: $blue-920;
+    background-color: $orange-450;
+    border: transparent;
+    outline: transparent;
 
     &::placeholder {
-      color: #234969;
+      color: $blue-920;
+    }
+
+    &:focus {
+      background-color: $orange-600;
     }
   }
 
   &__form-btn {
-    padding: 9px 20px 8px 15px;
-    margin-left: -3px;
-    border: none;
-    outline: none;
+    padding: 7px 15px 6px 15px;
+    margin-left: -4px;
+    background-color: $blue-800;
     color: #fff;
-    background-color: $btn;
-    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $blue-920;
+    }
   }
 }
 
-.footer-bottom {
+.address {
+  font-style: inherit;
+
+  &__item:not(:last-child) {
+    display: block;
+    margin-bottom: 12px;
+    transition: color 0.3s;
+  }
+
+  &__item:not(:first-child):hover {
+    color: $blue-950;
+  }
+}
+
+.footer-nav {
   display: flex;
   justify-content: space-between;
   padding: 35px 0 40px;
   font-size: 14px;
   line-height: 1.5;
-  color: #7b7b7b;
+  color: $grey-850;
 
   &__items {
     display: flex;
   }
 
-  // не всовывается с footer-top
-  &__item:hover {
-    color: $hov;
-    transition: color 0.5s;
-  }
+  &__item {
+    transition: color 0.3s;
 
-  &__item:not(:last-child) {
-    position: relative;
-    margin-right: 35px;
-  }
+    &:hover {
+      color: $blue-920;
+    }
 
-  &__item:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    top: 1px;
-    right: -17px;
-    width: 2px;
-    height: 18px;
-    background-color: #7b7b7b;
-    opacity: 0.4;
+    &:not(:last-child) {
+      position: relative;
+      margin-right: 30px;
+    }
+
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 1px;
+      right: -17px;
+      width: 2px;
+      height: 18px;
+      background-color: $grey-850;
+      opacity: 0.4;
+    }
   }
 }
-
-
-
-
-
-
-@import 'media';

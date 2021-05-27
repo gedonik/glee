@@ -5,9 +5,22 @@ $(function () {
 
   $('.top-slider__inner').slick({
     dots: true,
-    arrows: false
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
   });
 
-  var mixer = mixitup('.popular__content');
+  // ломает стили
+  // $('.partners').slick({
+  //   dots: false,
+  //   arrows: false,
+  //   slidesToShow: 4,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 2000,
+  // });
 
 });
+
+var mixer = mixitup('.mix-nav__content');
+var mixer = mixitup('.mix-nav__content--new');

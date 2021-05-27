@@ -1,36 +1,26 @@
-$default: #436372;
-$title: #191919;
-$desc: #29282d;
-$background: #fcd7b6;
-$btn: #a3bbc8;
-$hov: #1f2044;
+$black-950: #1a1a1a;
+$black-900: #191919;
+$black-850: #29282d;
+$grey-850: #7b7b7b;
+$grey-800: #8b8b8b;
+$grey-700: #b3b7b5;
+$grey-600: #edf1f4;
+$grey-550: #f8f8f8;
+$blue-950: #1f2044;
+$blue-920: #234969;
+$blue-900: #243f4d;
+$blue-850: #436372;
+$blue-800: #a3bbc8;
+$blue-750: #dae4e9;
+$orange-600: #fcd7b6;
+$orange-500: #fde7d3;
+$orange-470: #feefe2;
+$orange-450: #fef7f0;
 
-%dmsans-400 {
-  font-family: 'DMSans-Regular', sans-serif;
-  font-weight: 400;
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
 }
 
-%dmsans-500 {
-  font-family: 'DMSans-Medium', sans-serif;
-  font-weight: 500;
-}
-
-%dmsans-700 {
-  font-family: 'DMSans-Bold', sans-serif;
-  font-weight: 700;
-}
-
-%rubik-400 {
-  font-family: 'Rubik-Regular', sans-serif;
-  font-weight: 400;
-}
-
-%rubik-500 {
-  font-family: 'Rubik-Medium', sans-serif;
-  font-weight: 500;
-}
-
-%rubik-700 {
-  font-family: 'Rubik-Bold', sans-serif;
-  font-weight: 700;
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
 }

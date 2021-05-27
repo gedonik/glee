@@ -12,6 +12,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
+const svgSprite = require('gulp-svg-sprite');
 const browserSync = require('browser-sync').create();
 
 function browsersync() {
@@ -21,6 +22,21 @@ function browsersync() {
     },
     notify: false
   })
+}
+
+function svgSprites() {
+  return src('app/images/svg/*.svg')
+    .pipe(
+      svgSprite({
+        mode: {
+          stack: {
+            sprite: '../sprite.svg',
+          },
+        },
+      })
+    )
+
+    .pipe(dest('app/images'));
 }
 
 function styles() {
@@ -41,6 +57,7 @@ function scripts() {
   return src([
       'node_modules/jquery/dist/jquery.js',
       'node_modules/slick-carousel/slick/slick.js',
+      'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
       'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))
@@ -95,6 +112,7 @@ function watching() {
   watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 
+exports.svgSprites = svgSprites;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.browsersync = browsersync;
@@ -102,5 +120,5 @@ exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
 
-exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.build = series(cleanDist, images, svgSprites, build);
+exports.default = parallel(styles, svgSprites, scripts, browsersync, watching);
